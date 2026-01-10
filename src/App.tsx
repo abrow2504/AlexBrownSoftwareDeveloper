@@ -1,16 +1,35 @@
 import { useState } from 'react'
 import './App.css'
 import mePhoto from './assets/me.png'
-import TravelTrackingProject from './components/TravelTrackingProject'
-import MoodGardenProject from './components/MoodGardenProject'
-import DOE417Project from './components/DOE417Project'
-import TravelSystemProject from './components/TravelSystemProject'
-import CalendarAutomationProject from './components/CalendarAutomationProject'
-import ProposalSystemProject from './components/ProposalSystemProject'
-import ConcertFinderProject from './components/ConcertFinderProject'
-import AILearningProject from './components/AILearningProject'
+import TravelTrackingProject from './components/ProjectPages/TravelTrackingProject'
+import MoodGardenProject from './components/ProjectPages/MoodGardenProject'
+import DOE417Project from './components/ProjectPages/DOE417Project'
+import TravelSystemProject from './components/ProjectPages/TravelSystemProject'
+import CalendarAutomationProject from './components/ProjectPages/CalendarAutomationProject'
+import ProposalSystemProject from './components/ProjectPages/ProposalSystemProject'
+import ConcertFinderProject from './components/ProjectPages/ConcertFinderProject'
+import AILearningProject from './components/ProjectPages/AILearningProject'
 import ProjectCard from './components/projectCard'
+// Inlined nav + scroll helpers (previously in router.ts)
+const NAV_LINKS = [
+  { label: 'About', section: 'about' },
+  { label: 'Skills', section: 'skills' },
+  { label: 'Projects', section: 'projects' },
+  { label: 'Contact', section: 'contact' },
+]
+type SectionId = 'hero' | 'about' | 'skills' | 'projects' | 'contact'
+const SECTIONS: Record<SectionId, string> = {
+  hero: 'hero',
+  about: 'about',
+  skills: 'skills',
+  projects: 'projects',
+  contact: 'contact',
+}
 
+function scrollToSection(sectionId: SectionId): void {
+  const el = document.getElementById(SECTIONS[sectionId])
+  if (el) el.scrollIntoView({ behavior: 'smooth' })
+}
 function App() {
   const [currentView, setCurrentView] = useState('home')
 
@@ -52,10 +71,16 @@ function App() {
           <div className="nav-container">
             <h1 className="nav-title">Alex Brown</h1>
             <ul className="nav-links">
-              <li><button onClick={() => setCurrentView('home')} className="nav-link">About</button></li>
-              <li><button onClick={() => setCurrentView('home')} className="nav-link">Skills</button></li>
-              <li><button onClick={() => setCurrentView('home')} className="nav-link">Projects</button></li>
-              <li><button onClick={() => setCurrentView('home')} className="nav-link">Contact</button></li>
+              {NAV_LINKS.map((l) => (
+                <li key={l.section}>
+                  <button
+                    className="nav-link"
+                    onClick={() => scrollToSection(l.section as SectionId)}
+                  >
+                    {l.label}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
         </nav>
@@ -69,7 +94,7 @@ function App() {
                 <h1>Hi, I'm Alex Brown</h1>
                 <h2>Software Engineer (Frontend / Automation)</h2>
                 <p>Passionate about workplace automation, frontend development, and creating scalable technical solutions that improve operational efficiency.</p>
-                <a onClick={() => setCurrentView('home')} className="btn">View My Work</a>
+                <button onClick={() => scrollToSection('projects')} className="btn">View My Work</button>
               </div>
               <div className="hero-photo">
                 <img src={mePhoto} alt="Alex Brown" className="profile-photo" />
@@ -222,7 +247,7 @@ function App() {
             <div className="contact-info">
               <p><strong>Email:</strong> <a href="mailto:al.brown0605@gmail.com">al.brown0605@gmail.com</a></p>
               <p><strong>Phone:</strong> 801-864-4267</p>
-              <p><strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/alex-brown</a></p>
+              <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/albrown0605/" target="_blank">https://www.linkedin.com/in/albrown0605/</a></p>
               <p><strong>GitHub:</strong> <a href="#" target="_blank">github.com/alexbrown</a></p>
             </div>
           </div>
