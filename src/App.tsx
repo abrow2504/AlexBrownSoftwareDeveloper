@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import mePhoto from './assets/me.png'
 import TravelTrackingProject from './components/TravelTrackingProject'
 import MoodGardenProject from './components/MoodGardenProject'
 import DOE417Project from './components/DOE417Project'
@@ -8,6 +9,7 @@ import CalendarAutomationProject from './components/CalendarAutomationProject'
 import ProposalSystemProject from './components/ProposalSystemProject'
 import ConcertFinderProject from './components/ConcertFinderProject'
 import AILearningProject from './components/AILearningProject'
+import ProjectCard from './components/projectCard'
 
 function App() {
   const [currentView, setCurrentView] = useState('home')
@@ -62,10 +64,17 @@ function App() {
       <main>
         <section id="hero" className="hero">
           <div className="container">
-            <h1>Hi, I'm Alex Brown</h1>
-            <h2>Software Engineer (Frontend / Automation)</h2>
-            <p>Passionate about workplace automation, frontend development, and creating scalable technical solutions that improve operational efficiency.</p>
-            <a onClick={() => setCurrentView('home')} className="btn">View My Work</a>
+            <div className="hero-content">
+              <div className="hero-text">
+                <h1>Hi, I'm Alex Brown</h1>
+                <h2>Software Engineer (Frontend / Automation)</h2>
+                <p>Passionate about workplace automation, frontend development, and creating scalable technical solutions that improve operational efficiency.</p>
+                <a onClick={() => setCurrentView('home')} className="btn">View My Work</a>
+              </div>
+              <div className="hero-photo">
+                <img src={mePhoto} alt="Alex Brown" className="profile-photo" />
+              </div>
+            </div>
           </div>
         </section>
 
@@ -145,112 +154,63 @@ function App() {
           <div className="container">
             <h2>Featured Projects</h2>
             <div className="projects-grid">
-              <div className="project-card">
-                <h3>Mood Garden</h3>
-                <p>A personal React/TypeScript web app that combines mood tracking with AI-generated insights and cute spooky illustrations.</p>
-                <div className="project-tech">
-                  <strong>Technologies:</strong> React, TypeScript, Firebase Auth, OpenAI API, Firestore, Vite, Express, CSS Animations
-                </div>
-                <div className="project-links">
-                  <button className="btn" onClick={() => setCurrentView('mood-garden')}>View Details</button>
-                  <a href="#" className="btn" target="_blank">GitHub Repo</a>
-                </div>
-                <div className="project-writeup">
-                  <h4>Project Process</h4>
-                  <p>Built right after graduation as a creative outlet combining my love for art and technology. Features Firebase authentication, AI-powered mood insights, and hand-drawn spooky illustrations with smooth animations.</p>
-                </div>
-              </div>
+              <ProjectCard
+                projectName="Mood Garden"
+                projectTech="React, TypeScript, Firebase Auth, OpenAI API, Firestore, Vite, Express, CSS Animations"
+                projectDescription="A personal React/TypeScript web app that combines mood tracking with AI-generated insights and cute spooky illustrations."
+                onViewDetails={() => setCurrentView('mood-garden')}
+                repoLink="#"
+                projectWriteup="Built right after graduation as a creative outlet combining my love for art and technology. Features Firebase authentication, AI-powered mood insights, and hand-drawn spooky illustrations with smooth animations."
+              />
+              <ProjectCard
+                projectName="DOE417 Frontend & Testing"
+                projectTech="React, TypeScript, Cypress, HTML, CSS, REST APIs"
+                projectDescription="Comprehensive frontend development and test automation for a DOE compliance application, progressing from QA to full feature development."
+                onViewDetails={() => setCurrentView('doe417')}
+                repoLink="#"
+                projectWriteup="Started with Cypress end-to-end test automation, then progressed to HTML/CSS improvements, and finally delivered complete user-facing features with form submissions and API integration."
+              />
+              <ProjectCard
+                projectName="Connected Travel System"
+                projectTech="Power Automate, SharePoint, Microsoft Forms, Email Integration"
+                projectDescription="A comprehensive Power Automate solution for managing complex travel requests and approvals across multiple organizational units."
+                onViewDetails={() => setCurrentView('travel-system')}
+                repoLink="#"
+                projectWriteup="Highly popular automation system used by administrators across various PNNL organizations. Streamlines the entire travel lifecycle from request to completion with automated notifications and status tracking."
+              />
+              <ProjectCard
+                projectName="Division Calendar Automation"
+                projectTech="Power Automate, HTTP APIs, Microsoft Graph, SharePoint"
+                projectDescription="Advanced Power Automate workflow using HTTP calls and custom integrations for automated calendar management and notifications."
+                onViewDetails={() => setCurrentView('calendar-automation')}
+                repoLink="#"
+                projectWriteup="Complex workflow designed to automate calendar management tasks across departments. Uses HTTP calls to integrate with external systems and provides real-time updates through email notifications."
+              />
+              <ProjectCard
+                projectName="Proposal Management System"
+                projectTech="Power Apps, Power Automate, SharePoint, Microsoft Forms"
+                projectDescription="A Power Apps solution for managing portfolio proposals with custom forms, approval workflows, and status tracking."
+                onViewDetails={() => setCurrentView('proposal-system')}
+                repoLink="#"
+                projectWriteup="Streamlines the entire proposal process from submission to approval. Features custom Power Apps interfaces for users and automated workflows for reviewers and approvers."
+              />
+              <ProjectCard
+                projectName="US Concert Finder"
+                projectTech="Technologies:</strong> Python, Selenium, GitHub Actions, iOS Notifications, Email APIs"
+                projectDescription="A Python automation script that monitors a concert website and sends instant notifications when new US dates are announced."
+                onViewDetails={() => setCurrentView('concert-finder')}
+                repoLink="#"
+                projectWriteup="Personal project that runs automatically every 10 minutes on GitHub Actions, scraping concert websites for new US tour dates and delivering instant notifications via iOS and email."
+              />
+              <ProjectCard
+                projectName="AI Learning Approach"
+                projectTech="ChatGPT, GitHub Copilot, Claude, Various AI Coding Assistants"
+                projectDescription="A comprehensive methodology for leveraging AI tools to accelerate software development learning and problem-solving."
+                onViewDetails={() => setCurrentView('ai-learning')}
+                repoLink="#"
+                projectWriteup="Documented approach to using AI tools effectively for learning new technologies, debugging, code review, and accelerating development workflows while maintaining code quality and understanding."
+              />  
 
-              <div className="project-card">
-                <h3>DOE417 Frontend & Testing</h3>
-                <p>Comprehensive frontend development and test automation for a DOE compliance application, progressing from QA to full feature development.</p>
-                <div className="project-tech">
-                  <strong>Technologies:</strong> React, TypeScript, Cypress, HTML, CSS, REST APIs
-                </div>
-                <div className="project-links">
-                  <button className="btn" onClick={() => setCurrentView('doe417')}>View Details</button>
-                </div>
-                <div className="project-writeup">
-                  <h4>Project Process</h4>
-                  <p>Started with Cypress end-to-end test automation, then progressed to HTML/CSS improvements, and finally delivered complete user-facing features with form submissions and API integration.</p>
-                </div>
-              </div>
-
-              <div className="project-card">
-                <h3>Connected Travel System</h3>
-                <p>A comprehensive Power Automate solution for managing complex travel requests and approvals across multiple organizational units.</p>
-                <div className="project-tech">
-                  <strong>Technologies:</strong> Power Automate, SharePoint, Microsoft Forms, Email Integration
-                </div>
-                <div className="project-links">
-                  <button className="btn" onClick={() => setCurrentView('travel-system')}>View Details</button>
-                </div>
-                <div className="project-writeup">
-                  <h4>Project Process</h4>
-                  <p>Highly popular automation system used by administrators across various PNNL organizations. Streamlines the entire travel lifecycle from request to completion with automated notifications and status tracking.</p>
-                </div>
-              </div>
-
-              <div className="project-card">
-                <h3>Division Calendar Automation</h3>
-                <p>Advanced Power Automate workflow using HTTP calls and custom integrations for automated calendar management and notifications.</p>
-                <div className="project-tech">
-                  <strong>Technologies:</strong> Power Automate, HTTP APIs, Microsoft Graph, SharePoint
-                </div>
-                <div className="project-links">
-                  <button className="btn" onClick={() => setCurrentView('calendar-automation')}>View Details</button>
-                </div>
-                <div className="project-writeup">
-                  <h4>Project Process</h4>
-                  <p>Complex automation that goes beyond built-in actions, utilizing direct HTTP calls to integrate with various systems for comprehensive calendar management and automated notifications.</p>
-                </div>
-              </div>
-
-              <div className="project-card">
-                <h3>Portfolio Proposal System</h3>
-                <p>A Power Apps solution for managing portfolio proposals with custom forms, approval workflows, and reporting capabilities.</p>
-                <div className="project-tech">
-                  <strong>Technologies:</strong> Power Apps, SharePoint, Power Automate, Power BI
-                </div>
-                <div className="project-links">
-                  <button className="btn" onClick={() => setCurrentView('proposal-system')}>View Details</button>
-                </div>
-                <div className="project-writeup">
-                  <h4>Project Process</h4>
-                  <p>End-to-end solution for proposal management including custom forms, multi-tier approvals, automated notifications, and integrated reporting dashboards.</p>
-                </div>
-              </div>
-
-              <div className="project-card">
-                <h3>US Concert Date Finder</h3>
-                <p>A Python automation script that monitors concert tour websites and sends instant notifications when new US dates are announced.</p>
-                <div className="project-tech">
-                  <strong>Technologies:</strong> Python, Selenium, GitHub Actions, iOS Notifications, Email API
-                </div>
-                <div className="project-links">
-                  <button className="btn" onClick={() => setCurrentView('concert-finder')}>View Details</button>
-                  <a href="#" className="btn" target="_blank">GitHub Repo</a>
-                </div>
-                <div className="project-writeup">
-                  <h4>Project Process</h4>
-                  <p>Personal project that runs automatically every 10 minutes on GitHub Actions, scraping concert websites for new US tour dates and delivering instant notifications via iOS and email.</p>
-                </div>
-              </div>
-
-              <div className="project-card">
-                <h3>AI-Assisted Learning Approach</h3>
-                <p>A comprehensive methodology for leveraging AI tools to accelerate software development learning and problem-solving.</p>
-                <div className="project-tech">
-                  <strong>Technologies:</strong> ChatGPT, GitHub Copilot, Claude, Various AI Coding Assistants
-                </div>
-                <div className="project-links">
-                  <button className="btn" onClick={() => setCurrentView('ai-learning')}>View Details</button>
-                </div>
-                <div className="project-writeup">
-                  <h4>Project Process</h4>
-                  <p>Documented approach to using AI tools effectively for learning new technologies, debugging, code review, and accelerating development workflows while maintaining code quality and understanding.</p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
