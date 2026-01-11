@@ -1,7 +1,7 @@
 .project-detail {
   min-height: 100vh;
   padding: 2rem 0;
-  background-color: #f8f9fa;
+  background-color: var(--color-bg-medium);
 }
 
 .project-detail .container {
@@ -11,17 +11,17 @@
 }
 
 .project-detail h1 {
-  color: #007acc;
+  color: var(--color-primary);
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2.5rem;
 }
 
 .project-detail h2 {
-  color: #333;
+  color: var(--color-text-primary);
   margin: 2rem 0 1rem 0;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #007acc;
+  border-bottom: 2px solid var(--color-primary);
 }
 
 .project-overview p,
@@ -39,8 +39,8 @@
 }
 
 .tech-tag {
-  background-color: #007acc;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -48,27 +48,29 @@
 }
 
 .challenge-solution {
-  background: white;
+  background: var(--color-white);
   padding: 1.5rem;
   margin: 1rem 0;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(59, 51, 85, 0.1);
+  border-left: 4px solid var(--color-dusty-grape);
 }
 
 .challenge-solution h3 {
-  color: #007acc;
+  color: var(--color-primary);
   margin-bottom: 0.5rem;
 }
 
 .challenge-solution strong {
-  color: #333;
+  color: var(--color-text-secondary);
 }
 
 .project-features ul {
-  background: white;
+  background: var(--color-white);
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(59, 51, 85, 0.1);
+  border: 1px solid var(--color-pale-slate);
 }
 
 .project-features li {
@@ -79,22 +81,23 @@
 
 .project-features li:before {
   content: "✓";
-  color: #007acc;
+  color: var(--color-primary);
   font-weight: bold;
   position: absolute;
   left: 0;
 }
 
 .tool-strategy {
-  background: white;
+  background: var(--color-white);
   padding: 1.5rem;
   margin: 1rem 0;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(59, 51, 85, 0.1);
+  border: 1px solid var(--color-pale-slate);
 }
 
 .tool-strategy h4 {
-  color: #007acc;
+  color: var(--color-primary);
   margin-bottom: 0.5rem;
 }
 
@@ -104,15 +107,15 @@
 }
 
 .code-example {
-  background: #f8f9fa;
+  background: var(--color-pale-slate);
   padding: 1.5rem;
   margin: 1rem 0;
   border-radius: 8px;
-  border-left: 4px solid #007acc;
+  border-left: 4px solid var(--color-dusty-grape);
 }
 
 .code-example h4 {
-  color: #333;
+  color: var(--color-text-secondary);
   margin-bottom: 0.5rem;
 }
 

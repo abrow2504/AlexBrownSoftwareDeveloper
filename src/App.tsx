@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import mePhoto from './assets/me.png'
+import { useTheme } from './ThemeContext'
 import TravelTrackingProject from './components/ProjectPages/TravelTrackingProject'
 import MoodGardenProject from './components/ProjectPages/MoodGardenProject'
 import DOE417Project from './components/ProjectPages/DOE417Project'
@@ -32,6 +33,7 @@ function scrollToSection(sectionId: SectionId): void {
 }
 function App() {
   const [currentView, setCurrentView] = useState('home')
+  const { isDarkMode, toggleTheme } = useTheme()
 
   const renderView = () => {
     switch(currentView) {
@@ -70,18 +72,27 @@ function App() {
         <nav className="nav">
           <div className="nav-container">
             <h1 className="nav-title">Alex Brown</h1>
-            <ul className="nav-links">
-              {NAV_LINKS.map((l) => (
-                <li key={l.section}>
-                  <button
-                    className="nav-link"
-                    onClick={() => scrollToSection(l.section as SectionId)}
-                  >
-                    {l.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
+            <div className="nav-right">
+              <ul className="nav-links">
+                {NAV_LINKS.map((l) => (
+                  <li key={l.section}>
+                    <button
+                      className="nav-link"
+                      onClick={() => scrollToSection(l.section as SectionId)}
+                    >
+                      {l.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+              <button 
+                className="theme-toggle" 
+                onClick={toggleTheme}
+                aria-label="Toggle dark mode"
+              >
+                {isDarkMode ? '☀️' : '🌙'}
+              </button>
+            </div>
           </div>
         </nav>
       </header>
