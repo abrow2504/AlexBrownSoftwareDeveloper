@@ -1,4 +1,5 @@
 import './ProjectDetail.css'
+import { useNavigation } from '../../NavigationContext'
 
 interface ProjectPageProps {
     projectTitle: string
@@ -21,11 +22,10 @@ interface ProjectPageProps {
         results: string;
         measurableOutcomes: string[]
     }
-
-
 }
 
 export default function ProjectPage({ projectTitle, projectOverview, techStack, context, solution, challenges, impact }: ProjectPageProps) {
+  const { navigateToProjects } = useNavigation()
   return (
     <div className="project-detail">
       <div className="container">
@@ -104,7 +104,7 @@ export default function ProjectPage({ projectTitle, projectOverview, techStack, 
         </div>
 
         <div className="project-links">
-          <a href="#projects" className="btn">← Back to Projects</a>
+          <button onClick={navigateToProjects} className="btn">← Back to Projects</button>
         </div>
         </div>
         </div>

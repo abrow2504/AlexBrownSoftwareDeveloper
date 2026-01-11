@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import mePhoto from './assets/me.png'
 import { useTheme } from './ThemeContext'
+import { NavigationProvider } from './NavigationContext'
 import TravelTrackingProject from './components/ProjectPages/TravelTrackingProject'
 import MoodGardenProject from './components/ProjectPages/MoodGardenProject'
 import DOE417Project from './components/ProjectPages/DOE417Project'
@@ -35,6 +36,16 @@ function App() {
   const [currentView, setCurrentView] = useState('home')
   const { isDarkMode, toggleTheme } = useTheme()
 
+  const navigationValue = {
+    navigateToHome: () => setCurrentView('home'),
+    navigateToProjects: () => {
+      setCurrentView('home')
+      setTimeout(() => {
+        scrollToSection('projects')
+      }, 100)
+    }
+  }
+
   const renderView = () => {
     switch(currentView) {
       case 'travel-project':
@@ -60,9 +71,11 @@ function App() {
 
   if (currentView !== 'home') {
     return (
-      <div className="app">
-        {renderView()}
-      </div>
+      <NavigationProvider value={navigationValue}>
+        <div className="app">
+          {renderView()}
+        </div>
+      </NavigationProvider>
     )
   }
 
