@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // Update base/outDir so GitHub Pages can host from the docs folder
 export default defineConfig({
-  base: '/alexBrown2026/',
+  base: '/AlexBrownSoftwareDeveloper/',
   build: {
     outDir: 'docs',
   },
