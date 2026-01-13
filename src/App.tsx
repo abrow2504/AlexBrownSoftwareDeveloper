@@ -272,7 +272,7 @@ function App() {
               <p><strong>Email:</strong> <a href="mailto:al.brown0605@gmail.com">al.brown0605@gmail.com</a></p>
               <p><strong>Phone:</strong> 801-864-4267</p>
               <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/albrown0605/" target="_blank">https://www.linkedin.com/in/albrown0605/</a></p>
-              <p><strong>GitHub:</strong> <a href="#" target="_blank">github.com/alexbrown</a></p>
+              <p><strong>GitHub:</strong> <a href="https://github.com/abrow2504/" target="_blank">github.com/abrow2504</a></p>
             </div>
           </div>
         </section>
