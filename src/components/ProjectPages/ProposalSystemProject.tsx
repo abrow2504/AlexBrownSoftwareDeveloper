@@ -3,49 +3,53 @@ import ProjectPage from './ProjectPage'
 function ProposalSystemProject() {
   return (
     <ProjectPage
-      projectTitle="Portfolio Proposal System"
-      projectOverview="A comprehensive Power Apps solution for managing portfolio proposals with custom forms, multi-tier approval workflows, and integrated reporting capabilities. This system streamlines the entire proposal lifecycle from submission through approval and execution."
-      techStack={["Power Apps", "SharePoint", "Power Automate", "Power BI", "Dataverse"]}
+      projectTitle="Research Computing Portfolio Proposal System"
+      projectOverview="A SharePoint and Power Automate-based workflow system that manages the complete lifecycle of Research Computing portfolio proposals from initial submission through final approval and Work Package Number (WPN) generation. The system automates multi-tier approvals, notifications, and status tracking for research computing project proposals."
+      techStack={["SharePoint", "Power Apps", "Power Automate"]}
       context={{
-        forWho: "Project managers, portfolio managers, and executive stakeholders involved in proposal development, review, and approval processes.",
-        problemToSolve: "Portfolio proposal management was fragmented across multiple systems and manual processes. Tracking proposal status, managing approvals, and generating reports required significant manual effort. Stakeholders lacked visibility into proposal pipelines, and the approval process was inconsistent and time-consuming."
+        forWho: "Research Computing division stakeholders including Offering Leads (proposal submitters), Capability Leads (group leads), Division Directors, Portfolio Managers, and RC Admins who manage the proposal review process.",
+        problemToSolve: "The division needed a structured, automated system to manage research computing portfolio proposals through a complex approval process. Without standardization, proposals lacked consistent review criteria, stakeholders missed notifications, approval status was unclear, and tracking proposals from submission to Work Package Number assignment was manual and error-prone."
       }}
       solution={{
-        approach: "Built a unified platform that combines Power Apps for the user interface, SharePoint for document management, Power Automate for workflow automation, and Power BI for reporting and analytics. The solution provides end-to-end proposal management with consistent processes and real-time visibility.",
+        approach: "Designed and implemented an integrated SharePoint and Power Automate solution with custom Power Apps forms. The system uses SharePoint lists as the data repository, Power Automate for automated workflows and notifications, and a custom Power Apps form for user interactions. Role-based permissions ensure proper access control while automated workflows handle state transitions and stakeholder communications.",
         keyFeatures: [
-          "Dynamic proposal forms with conditional fields based on proposal type",
-          "Multi-tier approval workflows with parallel and sequential routing",
-          "Document upload and version control for proposal artifacts",
-          "Real-time status tracking and progress visualization",
-          "Automated notifications and deadline reminders",
-          "Integration with project management systems",
-          "Comprehensive reporting and analytics dashboard",
-          "Mobile-responsive design for field access",
-          "Budget-based routing with different approval thresholds",
-          "Escalation protocols for overdue approvals"
+          "Multi-tier approval workflow: Capability Lead → Division Director → Leadership Team Review",
+          "Automated email notifications sent from shared rc.admins@pnnl.gov address to all stakeholders",
+          "Dynamic status tracking through 8 lifecycle states (Pending Pre-Approval, Draft, Ready for Review, Pending RC GL Review, Approved, Declined, WPN Issued, Hold, Needs Revision)",
+          "Custom Power Apps form with tabbed interface (Overview, Details, Risks, Approvals)",
+          "Built-in SharePoint commenting system for reviewer feedback and collaboration",
+          "Role-based access control via Portfolio Process Roles list",
+          "Automatic approver assignment based on capability area",
+          "Conditional workflow logic that restarts pre-approval if revisions requested early in process",
+          "Save as Draft functionality for offering leads to work incrementally",
+          "Complete audit trail of all approval decisions and status changes",
+          "Work Package Number (WPN) tracking and assignment workflow"
         ]
       }}
       challenges={{
-        difficulties: "The most challenging aspect was designing approval workflows that could handle the complex business rules and organizational hierarchies. Power Apps formula language for complex conditional logic was initially difficult to master. Integrating multiple Microsoft services while maintaining data consistency and user experience was also technically demanding.",
-        resolutions: "I created detailed workflow diagrams and decision trees before implementation. I built the solution iteratively, starting with simple workflows and gradually adding complexity. Extensive user testing and feedback sessions helped refine the user experience. I also studied advanced Power Apps patterns and formula techniques through documentation and community resources.",
+        difficulties: "The primary challenge was designing approval workflows that could handle complex conditional logic—specifically, determining when to restart the pre-approval cycle versus proceeding to leadership review based on the revision point in the lifecycle. Ensuring email notifications reached the right stakeholders at the right time required careful Power Automate flow design. Managing user expectations around the asynchronous nature of approval processes was also challenging.",
+        resolutions: "I created detailed workflow diagrams mapping all possible state transitions and decision points before building the Power Automate flows. I implemented status-based conditional logic to track whether proposals had completed pre-approval, enabling the system to intelligently route revision requests. For notifications, I standardized email templates that included proposal details, current status, required actions, and direct links to SharePoint items. User testing with actual stakeholders revealed pain points that led to UX improvements like clearer button labeling and the addition of the 'Save as Draft' feature.",
         lessonsLearned: [
-          "Advanced Power Apps development with complex formulas and data relationships",
-          "Designing scalable approval workflows for enterprise processes",
-          "Integration patterns between Power Platform services",
-          "User experience design for complex business applications",
-          "Data modeling and relationships in Dataverse",
-          "Building responsive canvas apps for various device types",
-          "Creating effective Power BI reports for business stakeholders"
+          "Power Automate workflow design for complex business processes with multiple decision branches",
+          "SharePoint list architecture and custom column configuration for workflow-driven data",
+          "Power Apps form development with conditional visibility and dynamic data validation",
+          "Email notification strategy and template design for automated business communications",
+          "Role-based security model implementation in SharePoint",
+          "User-centered design principles for business process automation",
+          "Importance of iterative development and stakeholder feedback in workflow design",
+          "Documentation best practices for complex enterprise systems (created comprehensive user runbook)"
         ]
       }}
       impact={{
-        results: "The Portfolio Proposal System has transformed how proposals are managed, providing transparency, efficiency, and consistency across the organization. The integrated reporting capabilities have improved decision-making and resource allocation.",
+        results: "The Research Computing Portfolio Proposal System has established a standardized, transparent process for managing research computing proposals. Automated workflows ensure consistent application of approval criteria across all capability areas while automated notifications keep stakeholders informed. Portfolio managers now have clear visibility into the proposal pipeline and can efficiently track items from submission through WPN issuance.",
         measurableOutcomes: [
-          "60% reduction in proposal processing time",
-          "Improved approval consistency across departments",
-          "Real-time visibility into $50M+ proposal pipeline",
-          "Enhanced stakeholder communication and collaboration",
-          "Comprehensive audit trail for compliance reporting"
+          "Automated notification system eliminates manual stakeholder communications",
+          "Standardized pre-approval process ensures consistent evaluation across all capability areas",
+          "Complete audit trail provides transparency and accountability for all approval decisions",
+          "Reduced manual tracking burden for portfolio managers through automated status updates",
+          "Integrated commenting system facilitates clear, documented feedback between reviewers and offering leads",
+          "Portfolio managers can efficiently monitor proposal pipeline and escalate delayed approvals",
+          "Established foundation for data-driven analysis of proposal trends and outcomes"
         ]
       }}
     />

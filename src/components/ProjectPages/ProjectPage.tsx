@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import './ProjectDetail.css'
 import { useNavigation } from '../../NavigationContext'
 import NavBar from '../NavBar'
@@ -27,6 +28,11 @@ interface ProjectPageProps {
 
 export default function ProjectPage({ projectTitle, projectOverview, techStack, context, solution, challenges, impact }: ProjectPageProps) {
   const { navigateToProjects } = useNavigation()
+  
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   return (
     <>
       <NavBar />
