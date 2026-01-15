@@ -97,6 +97,10 @@
   margin-top: 0;
 }
 
+.hero.hero-mobile {
+  padding-top: 10rem;
+}
+
 .hero-content {
   display: flex;
   align-items: center;

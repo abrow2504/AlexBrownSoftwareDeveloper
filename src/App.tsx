@@ -3,6 +3,7 @@ import './App.css'
 import mePhoto from './assets/me.png'
 import { useTheme } from './ThemeContext'
 import { NavigationProvider } from './NavigationContext'
+import { useScreenSize } from './hooks/useScreenSize'
 import TravelTrackingProject from './components/ProjectPages/TravelTrackingProject'
 import MoodGardenProject from './components/ProjectPages/MoodGardenProject'
 import DOE417Project from './components/ProjectPages/DOE417Project'
@@ -35,6 +36,7 @@ function scrollToSection(sectionId: SectionId): void {
 function App() {
   const [currentView, setCurrentView] = useState('home')
   const { isDarkMode, toggleTheme } = useTheme()
+  const { isMobile } = useScreenSize()
 
   const navigationValue = {
     navigateToHome: () => setCurrentView('home'),
@@ -84,7 +86,7 @@ function App() {
       <header className="header">
         <nav className="nav">
           <div className="nav-container">
-            <h1 className="nav-title">Alex Brown</h1>
+            {!isMobile && <h1 className="nav-title">Alex Brown</h1>}
             <div className="nav-right">
               <ul className="nav-links">
                 {NAV_LINKS.map((l) => (
@@ -111,7 +113,7 @@ function App() {
       </header>
 
       <main>
-        <section id="hero" className="hero">
+        <section id="hero" className={`hero ${isMobile ? 'hero-mobile' : ''}`}>
           <div className="container">
             <div className="hero-content">
               <div className="hero-text">
