@@ -1,5 +1,6 @@
 import './ProjectDetail.css'
 import { useNavigation } from '../../NavigationContext'
+import NavBar from '../NavBar'
 
 interface ProjectPageProps {
     projectTitle: string
@@ -27,9 +28,11 @@ interface ProjectPageProps {
 export default function ProjectPage({ projectTitle, projectOverview, techStack, context, solution, challenges, impact }: ProjectPageProps) {
   const { navigateToProjects } = useNavigation()
   return (
-    <div className="project-detail">
-      <div className="container">
-        <h1>{projectTitle}</h1>
+    <>
+      <NavBar />
+      <div className="project-detail">
+        <div className="container">
+          <h1>{projectTitle}</h1>
         <div className="project-overview">
           <h2>Project Overview</h2>
           <p>
@@ -109,6 +112,6 @@ export default function ProjectPage({ projectTitle, projectOverview, techStack, 
         </div>
         </div>
     </div>
-
-    )
-}     
+    </>
+  )
+}

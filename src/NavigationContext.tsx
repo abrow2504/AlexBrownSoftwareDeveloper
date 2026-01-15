@@ -1,9 +1,12 @@
 import { createContext, useContext } from 'react'
 import type { ReactNode } from 'react'
 
+type SectionId = 'hero' | 'about' | 'skills' | 'projects' | 'contact'
+
 interface NavigationContextType {
   navigateToHome: () => void
   navigateToProjects: () => void
+  navigateToSection: (section: SectionId) => void
 }
 
 const NavigationContext = createContext<NavigationContextType | undefined>(undefined)

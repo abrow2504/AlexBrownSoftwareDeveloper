@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.css'
 import mePhoto from './assets/me.png'
-import { useTheme } from './ThemeContext'
 import { NavigationProvider } from './NavigationContext'
 import { useScreenSize } from './hooks/useScreenSize'
 import TravelTrackingProject from './components/ProjectPages/TravelTrackingProject'
@@ -13,14 +12,10 @@ import ProposalSystemProject from './components/ProjectPages/ProposalSystemProje
 import ConcertFinderProject from './components/ProjectPages/ConcertFinderProject'
 import AILearningProject from './components/ProjectPages/AILearningProject'
 import ProjectCard from './components/projectCard'
-// Inlined nav + scroll helpers (previously in router.ts)
-const NAV_LINKS = [
-  { label: 'About', section: 'about' },
-  { label: 'Skills', section: 'skills' },
-  { label: 'Projects', section: 'projects' },
-  { label: 'Contact', section: 'contact' },
-]
+import NavBar from './components/NavBar'
+
 type SectionId = 'hero' | 'about' | 'skills' | 'projects' | 'contact'
+
 const SECTIONS: Record<SectionId, string> = {
   hero: 'hero',
   about: 'about',
@@ -33,9 +28,9 @@ function scrollToSection(sectionId: SectionId): void {
   const el = document.getElementById(SECTIONS[sectionId])
   if (el) el.scrollIntoView({ behavior: 'smooth' })
 }
+
 function App() {
   const [currentView, setCurrentView] = useState('home')
-  const { isDarkMode, toggleTheme } = useTheme()
   const { isMobile } = useScreenSize()
 
   const navigationValue = {
@@ -44,6 +39,12 @@ function App() {
       setCurrentView('home')
       setTimeout(() => {
         scrollToSection('projects')
+      }, 100)
+    },
+    navigateToSection: (section: SectionId) => {
+      setCurrentView('home')
+      setTimeout(() => {
+        scrollToSection(section)
       }, 100)
     }
   }
@@ -82,38 +83,11 @@ function App() {
   }
 
   return (
-    <div className="app">
-      <header className="header">
-        <nav className="nav">
-          <div className="nav-container">
-            {!isMobile && <h1 className="nav-title">Alex Brown</h1>}
-            <div className="nav-right">
-              <ul className="nav-links">
-                {NAV_LINKS.map((l) => (
-                  <li key={l.section}>
-                    <button
-                      className="nav-link"
-                      onClick={() => scrollToSection(l.section as SectionId)}
-                    >
-                      {l.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-              <button 
-                className="theme-toggle" 
-                onClick={toggleTheme}
-                aria-label="Toggle dark mode"
-              >
-                {isDarkMode ? '☀️' : '🌙'}
-              </button>
-            </div>
-          </div>
-        </nav>
-      </header>
-
-      <main>
-        <section id="hero" className={`hero ${isMobile ? 'hero-mobile' : ''}`}>
+    <NavigationProvider value={navigationValue}>
+      <div className="app">
+        <NavBar />
+        <main>
+          <section id="hero" className={`hero ${isMobile ? 'hero-mobile' : ''}`}>
           <div className="container">
             <div className="hero-content">
               <div className="hero-text">
@@ -289,7 +263,8 @@ function App() {
           <p>&copy; 2026 Alex Brown. All rights reserved.</p>
         </div>
       </footer>
-    </div>
+      </div>
+    </NavigationProvider>
   )
 }
 
