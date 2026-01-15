@@ -203,6 +203,14 @@ function App() {
           <div className="container">
             <h2>Featured Projects</h2>
             <div className="projects-grid">
+                            <ProjectCard
+                projectName="Connected Travel System"
+                projectTech="Power Automate, SharePoint, Microsoft Forms, Email Integration"
+                projectDescription="A comprehensive Power Automate solution for managing complex travel requests and approvals across multiple organizational units."
+                onViewDetails={() => setCurrentView('travel-system')}
+                repoLink="#"
+                projectWriteup="Highly popular automation system used by administrators across various PNNL organizations. Streamlines the entire travel lifecycle from request to completion with automated notifications and status tracking."
+              />
               <ProjectCard
                 projectName="Mood Garden"
                 projectTech="React, TypeScript, Firebase Auth, OpenAI API, Firestore, Vite, Express, CSS Animations"
@@ -219,14 +227,7 @@ function App() {
                 repoLink="#"
                 projectWriteup="Started with Cypress end-to-end test automation, then progressed to HTML/CSS improvements, and finally delivered complete user-facing features with form submissions and API integration."
               />
-              <ProjectCard
-                projectName="Connected Travel System"
-                projectTech="Power Automate, SharePoint, Microsoft Forms, Email Integration"
-                projectDescription="A comprehensive Power Automate solution for managing complex travel requests and approvals across multiple organizational units."
-                onViewDetails={() => setCurrentView('travel-system')}
-                repoLink="#"
-                projectWriteup="Highly popular automation system used by administrators across various PNNL organizations. Streamlines the entire travel lifecycle from request to completion with automated notifications and status tracking."
-              />
+
               <ProjectCard
                 projectName="Division Calendar Automation"
                 projectTech="Power Automate, HTTP APIs, Microsoft Graph, SharePoint"

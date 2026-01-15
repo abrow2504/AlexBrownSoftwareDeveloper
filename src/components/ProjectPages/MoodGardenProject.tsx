@@ -4,41 +4,42 @@ function MoodGardenProject() {
   return (
     <ProjectPage
       projectTitle="Mood Garden"
-      projectOverview="A personal React/TypeScript web application that combines mood tracking with AI-generated insights and hand-drawn spooky illustrations. Built right after graduation as a creative outlet combining my love for art and technology."
-      techStack={["React", "TypeScript", "Firebase Auth", "OpenAI API", "Firestore", "Vite", "Express", "CSS Animations"]}
+      projectOverview="A post-graduation passion project that transforms daily mood logging into a spooky haunted garden. Mood Garden pairs a React + TypeScript front end with AI narration and hand-drawn art so emotional check-ins feel like tending an enchanted landscape."
+      techStack={["React 19", "TypeScript", "Firebase Auth", "Firestore", "Vite", "Express Proxy", "OpenAI API", "CSS Animations"]}
       context={{
-        forWho: "Myself and anyone interested in creative mood tracking with a spooky twist.",
-        problemToSolve: "Traditional mood tracking apps can feel clinical and impersonal. I wanted to create something that combines emotional self-reflection with creative expression and AI-powered insights, while incorporating my love for spooky aesthetics and fantasy elements."
+        forWho: "Built for fun to marry my new skills as newly graduated software engineer with my love of illustration and all things spooky.",
+        problemToSolve: "To challenge myself to build a full-stack app that blends creativity with technical rigor, while exploring how AI can enhance personal reflection. This one's still a work in progress that I try to iterate on in my spare time!",
       }}
       solution={{
-        approach: "The app allows users to log their daily moods through an intuitive interface featuring hand-drawn illustrations. Each mood entry triggers AI analysis to provide personalized insights and suggestions. The 'garden' metaphor represents emotional growth over time.",
+        approach: "Users log moods through a hand-illustrated interface, storing entries in Firestore and syncing the garden view in real time. Each submission passes through an Express proxy to the OpenAI API, returning gothic narration while the front end animates bespoke plants that evolve with every mood.",
         keyFeatures: [
-          "Secure user authentication and personalized mood gardens",
-          "Intuitive mood logging with visual mood indicators",
-          "AI-generated insights and coping strategies",
-          "Progress tracking with garden growth visualization",
-          "Hand-drawn spooky illustrations with smooth animations",
-          "Responsive design for mobile and desktop"
+          "Email/password auth that gates each user's private garden",
+          "Mood-specific plants with floating lonely spirits that drift across the scene",
+          "Oracle narration pipeline delivering AI insights grounded in recent entries",
+          "Timeline-backed progress view so gardens grow with every log",
+          "Hand-drawn illustrations paired with transform-based CSS animation",
+          "Responsive layout tuned for phones, tablets, and widescreen"
         ]
       }}
       challenges={{
-        difficulties: "Integrating the OpenAI API while maintaining user privacy and data security was challenging. I also struggled with creating smooth CSS animations for the hand-drawn illustrations while keeping the app performant.",
-        resolutions: "For the AI integration, I implemented proper error handling and rate limiting on the backend. I studied CSS animation performance best practices and used transform properties instead of layout-triggering properties. Extensive testing ensured the animations were smooth across different devices.",
+        difficulties: "Shielding the OpenAI key, handling narration failures gracefully, and animating heavy illustration assets without jank were the biggest hurdles-- in fact I'm still wrestling to get the garden to handle screen size changes gracefully!",
+        resolutions: "I introduced an Express proxy with rate limiting and custom error surfacing, cached narration fallbacks in the hook, and rewrote animations to rely on transforms while preloading assets and throttling motion updates.",
         lessonsLearned: [
-          "Advanced Firebase integration patterns for auth and real-time data",
-          "Responsible AI API usage and security considerations",
-          "CSS animation performance optimization techniques",
-          "Creating engaging user experiences through visual design",
-          "Balancing technical functionality with creative expression"
+          "Typed Firebase auth and Firestore patterns within React context",
+          "Practical API hardening with proxy routing and rate controls",
+          "Animation performance tuning for illustration-heavy UIs",
+          "Designing cohesive experiences where narrative, art, and data align",
+          "Balancing experimentation with production-ready guardrails",
+          "Exploring AI-assisted development workflows while maintaining code ownership and architectural decisions"
         ]
       }}
       impact={{
-        results: "Successfully created a unique mood tracking application that combines technical sophistication with creative expression. The application demonstrates my ability to integrate complex APIs, manage authentication, and create engaging user experiences with custom visual design.",
+        results: "Mood Garden proves I can ship a polished, expressive product that marries full-stack engineering with storytelling, from secure auth to AI-assisted narrative UX.",
         measurableOutcomes: [
-          "Functional full-stack application with secure authentication",
-          "Seamless AI API integration for personalized insights",
-          "Smooth animations and visual polish across devices",
-          "Creative expression combined with technical implementation"
+          "Deployed full-stack flow with Firebase-authenticated mood history",
+          "Express proxy that guards the OpenAI API key while logging errors transparently",
+          "Adaptive lonely-spirit animation system that stays performant across devices",
+          "Portfolio-ready demo that highlights my ability to blend creativity with robust engineering"
         ]
       }}
     />
