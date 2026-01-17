@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom, 
+  background: linear-gradient(to bottom right, 
     #ffffff 0%, 
     #f5f7fa 30%,
     var(--color-pale-slate) 100%);
@@ -10,10 +10,11 @@
 }
 
 .dark-mode .app {
-  background: linear-gradient(to bottom, 
-    #2d2640 0%, 
-    var(--color-vintage-grape) 50%, 
-    var(--color-dusty-grape) 100%);
+  background: linear-gradient(to bottom right, 
+    #000505 0%,
+    #0a0a0a 40%,
+    #1a1a1a 70%,
+    var(--color-vintage-grape) 100%);
   background-attachment: fixed;
 }
 
