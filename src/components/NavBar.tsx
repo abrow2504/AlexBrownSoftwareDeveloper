@@ -2,12 +2,14 @@ import { useTheme } from '../ThemeContext'
 import { useScreenSize } from '../hooks/useScreenSize'
 import { useNavigation } from '../NavigationContext'
 
-type SectionId = 'hero' | 'about' | 'skills' | 'projects' | 'contact'
+type SectionId = 'hero' | 'about' | 'whatsnext' | 'skills' | 'projects' | 'contact'
 
 const NAV_LINKS = [
   { label: 'About', section: 'about' as SectionId },
+
   { label: 'Skills', section: 'skills' as SectionId },
   { label: 'Projects', section: 'projects' as SectionId },
+    { label: "What's Next", section: 'whatsnext' as SectionId },
   { label: 'Contact', section: 'contact' as SectionId },
 ]
 

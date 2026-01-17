@@ -176,6 +176,81 @@
   line-height: 1.7;
 }
 
+/* What's Next Section */
+.whats-next {
+  background-color: var(--color-bg-light);
+  text-align: center;
+}
+
+.whats-next .section-intro {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.goal-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(59, 51, 85, 0.1);
+  border: 1px solid var(--color-pale-slate);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.goal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(59, 51, 85, 0.15);
+}
+
+.goal-number {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--color-pale-slate);
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.goal-card h3 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.goal-card p {
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.dark-mode .goal-card {
+  background: var(--color-bg-medium);
+  border-color: var(--color-pale-slate);
+}
+
+.dark-mode .goal-number {
+  color: var(--color-pale-slate);
+  opacity: 0.2;
+}
+
 /* Skills Section */
 .skills {
   background-color: var(--color-bg-light);
