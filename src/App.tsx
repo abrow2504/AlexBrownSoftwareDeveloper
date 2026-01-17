@@ -106,28 +106,17 @@ function App() {
           <div className="container">
             <h2>About Me</h2>
             <p>
-              I never imagined myself in tech. I always saw my future in the arts or writing—anything creative felt like home. 
-              But life had other plans. My journey into software development began unexpectedly at Pacific Northwest National Laboratory (PNNL), 
-              where I started as an Administrative Coordinator supporting the Research Computing Division.
+              I never imagined myself in tech. If you'd told younger me that I'd have a Software Engineering degree one day, I'd have laughed. But life never goes to plan– and my journey into software development began unexpectedly at Pacific Northwest National Laboratory (PNNL), where I started as an Administrative Coordinator supporting the Research Computing Division.
             </p>
             <p>
-              Surrounded by brilliant software engineers, I watched them solve real problems with code and became curious. 
-              I started exploring low-code platforms like Microsoft Power Apps and Power Automate to automate tedious administrative tasks. 
-              What began as curiosity about "how does this work?" turned into hours of YouTube tutorials and hands-on experimentation. 
-              With encouragement from my managers, peers, and my partner, I took a leap into something completely new and foreign to me.
+              Surrounded by brilliant software engineers, watching them create something out of nothing… it seemed like actual magic to me. I started exploring low-code platforms like Microsoft Power Apps and Power Automate to automate tedious administrative tasks. What began as curiosity about "how can I make this a little easier?" turned into hours of YouTube tutorials and hands-on experimentation.
             </p>
             <p>
-              And I fell in love with it. Software development feels like actual magic to me—creating something out of nothing. 
-              Nearly four years later, I've progressed from administrative coordination to delivering production software solutions 
-              and earning a Bachelor's Degree in Software Engineering from WGU. Now I want to make magic every day.
+              With encouragement from my managers, peers, and my partner, I took a leap into something completely new and foreign to me and I was surprised to find that I fell in love with it. Nearly four years later, I have a Bachelor's Degree in Software Engineering from WGU in hand and have progressed to delivering production software solutions. Now I'm ready to make magic every day!
             </p>
+
             <p>
-              I love the intersection of technical problem-solving and user experience design, whether I'm building end-to-end 
-              Power Platform solutions for operational efficiency or writing Cypress tests to ensure application reliability.
-            </p>
-            <p>
-              When I'm not coding, you'll find me as a self-identified "indoorsy" person diving into fantasy and horror novels, 
-              binge-watching anime, creating digital art, painting, drawing, and most of all, playing PC video games.
+              When I'm not coding, you'll find me as a self-identified "indoorsy" person diving into fantasy and horror novels, binge-watching anime, creating digital art, painting, drawing, and playing PC video games.
             </p>
           </div>
         </section>

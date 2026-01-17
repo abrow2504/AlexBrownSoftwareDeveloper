@@ -473,7 +473,7 @@ section h2::after {
 }
 
 .about p {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto 1.5rem;
   font-size: 1.1rem;
   line-height: 1.8;
