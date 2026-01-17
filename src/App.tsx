@@ -243,7 +243,7 @@ function App() {
             </div>
           </div>
         </section>
-                <section id="whats-next" className="whats-next">
+                <section id="whatsnext" className="whatsnext">
           <div className="container">
             <h2>What's Next</h2>
             <p className="section-intro">Currently focused on accelerating my growth as a software engineer through targeted skill development and real-world experience.</p>

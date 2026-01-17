@@ -7,12 +7,12 @@ import image005 from '/image005.png'
 import image006 from '/image006.png'
 import image007 from '/image007.png'
 import image008 from '/image008.png'
-import image009 from '/image009.png'
+import image011 from '/image011.png'
 
 const galleryImages = [
         {
-    original: image009,
-    thumbnail: image009,
+    original: image011,
+    thumbnail: image011,
     description: 'SharePoint tracker list with custom views for active trips, personal assignments, and archives',
     originalWidth: 1655,
     originalHeight: 418
