@@ -163,7 +163,7 @@
 .dark-mode .project-links .btn:hover {
   background-color: var(--color-white);
   border-color: var(--color-white);
-  color: var(--color-vintage-grape);
+  color: var(--color-pale-slate);
 }
 
 /* Header and Navigation */
@@ -500,8 +500,8 @@ section h2::after {
 .whats-next .section-intro {
   max-width: 800px;
   margin: 0 auto 2.5rem;
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.2rem;
+  line-height: 1.8;
   color: var(--color-text-secondary);
 }
 
