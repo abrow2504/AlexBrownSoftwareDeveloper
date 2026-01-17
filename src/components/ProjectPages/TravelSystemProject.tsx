@@ -1,5 +1,70 @@
 import ProjectPage from './ProjectPage'
 
+// Import images directly from public folder
+import image003 from '/image003.png'
+import image004 from '/image004.png'
+import image005 from '/image005.png'
+import image006 from '/image006.png'
+import image007 from '/image007.png'
+import image008 from '/image008.png'
+import image009 from '/image009.png'
+
+const galleryImages = [
+        {
+    original: image009,
+    thumbnail: image009,
+    description: 'SharePoint tracker list with custom views for active trips, personal assignments, and archives',
+    originalWidth: 1655,
+    originalHeight: 418
+  },
+  {
+    original: image003,
+    thumbnail: image003,
+    description: 'Flow #1 - Request submission and notification',
+    originalWidth: 1655,
+    originalHeight: 418
+  },
+  {
+    original: image004,
+    thumbnail: image004,
+    description: 'Flow #2 - Automated notifications for status changes to keep travelers in the loop',
+    originalWidth: 1655,
+    originalHeight: 418
+  },
+  { original: image006,
+    thumbnail: image006,
+    description: 'Flow #3 - If ATR Submitted satus logic branch > daily departure reminders with travel letter PDF',
+    originalWidth: 1655,
+    originalHeight: 418
+  },
+  
+    {
+    original: image005,
+    thumbnail: image005,
+    description: 'Flow #2 - If Travel Booked status logic branch > sends traveler an official travel letter PDF',
+    originalWidth: 1655,
+    originalHeight: 418
+  },
+
+
+    {
+    original: image007,
+    thumbnail: image007,
+    description: 'Flow #3 Departure Reminders - daily scheduled trigger at 10 AM PST to notify tomorrow\'s travelers',
+    originalWidth: 1655,
+    originalHeight: 418
+  }, 
+      {
+    original: image008,
+    thumbnail: image008,
+    description: 'Flow #4 Return Reminders - daily scheduled trigger at 10 AM PST to notify yesterday\'s returnees',
+    originalWidth: 1655,
+    originalHeight: 418
+  }, 
+
+]
+
+
 function TravelSystemProject() {
   return (
     <ProjectPage
@@ -53,6 +118,8 @@ function TravelSystemProject() {
           "Comprehensive audit trail through SharePoint list history"
         ]
       }}
+      includeGallery={true}
+      images={galleryImages}
     />
   )
 }

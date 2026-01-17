@@ -3,7 +3,6 @@ import './App.css'
 import mePhoto from './assets/me.png'
 import { NavigationProvider } from './NavigationContext'
 import { useScreenSize } from './hooks/useScreenSize'
-import TravelTrackingProject from './components/ProjectPages/TravelTrackingProject'
 import MoodGardenProject from './components/ProjectPages/MoodGardenProject'
 import DOE417Project from './components/ProjectPages/DOE417Project'
 import TravelSystemProject from './components/ProjectPages/TravelSystemProject'
@@ -51,14 +50,12 @@ function App() {
 
   const renderView = () => {
     switch(currentView) {
-      case 'travel-project':
-        return <TravelTrackingProject />
+      case 'travel-system':
+        return <TravelSystemProject />
       case 'mood-garden':
         return <MoodGardenProject />
       case 'doe417':
         return <DOE417Project />
-      case 'travel-system':
-        return <TravelSystemProject />
       case 'calendar-automation':
         return <CalendarAutomationProject />
       case 'proposal-system':
