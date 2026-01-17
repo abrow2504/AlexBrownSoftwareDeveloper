@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import './ProjectDetail.css'
 import { useNavigation } from '../../NavigationContext'
 import NavBar from '../NavBar'
@@ -40,12 +40,17 @@ interface ProjectPageProps {
 
 export default function ProjectPage({ projectTitle, projectOverview, techStack, context, solution, challenges, impact, includeGallery = false, images = [] }: ProjectPageProps) {
   const { navigateToProjects } = useNavigation()
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
   
   console.log('Gallery Debug:', { includeGallery, imageCount: images.length, images })
   
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+  
+  const handleSlide = (currentIndex: number) => {
+    setCurrentImageIndex(currentIndex)
+  }
   
   return (
     <>
@@ -110,15 +115,20 @@ export default function ProjectPage({ projectTitle, projectOverview, techStack, 
           {includeGallery && images.length > 0 && (
             <div className="project-gallery">
               <h2>Gallery</h2>
+              {images[currentImageIndex]?.description && (
+                <div className="image-description">
+                  <p>{images[currentImageIndex].description}</p>
+                </div>
+              )}
               <ImageGallery 
                 items={images.map(image => ({
                   original: image.original,
                   thumbnail: image.thumbnail,
-                  description: image.description,
                   originalWidth: image.originalWidth,
                   originalHeight: image.originalHeight
                 }))} 
                 showFullscreenButton={false}
+                onSlide={handleSlide}
               />
             </div>
           )}
