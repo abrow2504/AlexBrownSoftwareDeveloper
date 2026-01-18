@@ -5,6 +5,7 @@ import SkillsSection from '../components/sections/SkillsSection'
 import ProjectsSection from '../components/sections/ProjectsSection'
 import WhatsNextSection from '../components/sections/WhatsNextSection'
 import ContactSection from '../components/sections/ContactSection'
+import CursorSpotlight from '../components/CursorSpotlight'
 
 interface HomePageProps {
   onViewWork: () => void
@@ -14,6 +15,7 @@ interface HomePageProps {
 export default function HomePage({ onViewWork, onProjectClick }: HomePageProps) {
   return (
     <>
+      <CursorSpotlight />
       <NavBar />
       <main>
         <HeroSection onViewWork={onViewWork} />
