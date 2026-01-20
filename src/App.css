@@ -1,45 +1,16 @@
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(to bottom right, 
-    #ffffff 0%, 
-    #f5f7fa 30%,
-    var(--color-pale-slate) 100%);
-  background-attachment: fixed;
-}
+/*
+ * App.css - Legacy Import File
+ * 
+ * This file has been refactored into modular CSS files.
+ * All styles are now imported directly in App.tsx and individual components.
+ * 
+ * New structure:
+ * - styles/shared/     → Reusable utilities (animations, buttons, cards, headers)
+ * - styles/layout/     → App-wide layouts (app.css, responsive.css)
+ * - components/*.css   → Component-specific styles next to their .tsx files
+ */
 
-.dark-mode .app {
-  background: linear-gradient(to bottom right, 
-    #000505 0%,
-    #0a0a0a 40%,
-    #1a1a1a 70%,
-    var(--color-vintage-grape) 100%);
-  background-attachment: fixed;
-}
-
-/* Global Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+/* This file is kept for backwards compatibility but is no longer used */
 
 /* Button Styles */
 .btn {

@@ -1,0 +1,47 @@
+/* Base Card Styles - shared across project cards, skill cards, goal cards */
+.card-base {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(59, 51, 85, 0.15);
+  border: 1px solid rgba(59, 51, 85, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.dark-mode .card-base {
+  background: rgba(59, 51, 85, 0.6);
+  border-color: rgba(191, 205, 224, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-base::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-secondary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-base:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(59, 51, 85, 0.25);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.dark-mode .card-base:hover {
+  background: rgba(59, 51, 85, 0.8);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card-base:hover::before {
+  transform: scaleX(1);
+}

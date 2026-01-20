@@ -1,0 +1,22 @@
+/* Section Headers */
+section h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--gradient-secondary);
+  border-radius: 2px;
+}
+
+.dark-mode section h2::after {
+  background: var(--gradient-secondary);
+}

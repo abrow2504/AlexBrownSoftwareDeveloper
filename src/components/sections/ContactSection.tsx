@@ -1,3 +1,5 @@
+import './ContactSection.css'
+
 export default function ContactSection() {
   return (
     <section id="contact" className="contact">

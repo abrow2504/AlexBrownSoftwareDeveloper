@@ -1,3 +1,4 @@
+import './HeroSection.css'
 import mePhoto from '../../assets/me.png'
 import { useScreenSize } from '../../hooks/useScreenSize'
 import { downloadFile } from '../../utils/downloadFile'

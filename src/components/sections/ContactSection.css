@@ -1,0 +1,101 @@
+/* Contact Section */
+.contact {
+  background: transparent;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 1rem;
+  color: var(--color-vintage-grape);
+}
+
+.dark-mode .contact h2 {
+  color: var(--color-white);
+}
+
+.contact > .container > p {
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+.dark-mode .contact > .container > p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.contact-info {
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(59, 51, 85, 0.15);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgba(59, 51, 85, 0.1);
+}
+
+.dark-mode .contact-info {
+  background: rgba(59, 51, 85, 0.6);
+  border-color: rgba(191, 205, 224, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info p {
+  margin: 1rem 0;
+  font-size: 1.05rem;
+  color: var(--color-text-primary);
+}
+
+.contact-info a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.contact-info a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.contact-info a:hover::after {
+  width: 100%;
+}
+
+.contact-info a:hover {
+  color: var(--color-secondary);
+}
+
+.dark-mode .contact-info p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dark-mode .contact-info a {
+  color: var(--color-pale-slate);
+}
+
+/* Footer */
+.footer {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-top: auto;
+  border-top: 1px solid rgba(191, 205, 224, 0.1);
+}
+
+.footer p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}

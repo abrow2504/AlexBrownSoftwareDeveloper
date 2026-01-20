@@ -1,3 +1,4 @@
+import './NavBar.css'
 import { useTheme } from '../ThemeContext'
 import { useScreenSize } from '../hooks/useScreenSize'
 import { useNavigation } from '../NavigationContext'

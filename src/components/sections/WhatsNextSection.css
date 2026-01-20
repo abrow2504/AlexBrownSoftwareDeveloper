@@ -1,0 +1,122 @@
+/* What's Next Section */
+.whatsnext {
+  background: transparent;
+  text-align: center;
+}
+
+.whatsnext h2 {
+  color: var(--color-vintage-grape);
+}
+
+.dark-mode .whatsnext h2 {
+  color: var(--color-white);
+}
+
+.whatsnext .section-intro {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+.dark-mode .whatsnext .section-intro {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.goal-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(59, 51, 85, 0.15);
+  border: 1px solid rgba(59, 51, 85, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.dark-mode .goal-card {
+  background: rgba(59, 51, 85, 0.6);
+  border-color: rgba(191, 205, 224, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.goal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-secondary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.goal-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(59, 51, 85, 0.25);
+  border-color: rgba(59, 51, 85, 0.2);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.dark-mode .goal-card:hover {
+  background: rgba(59, 51, 85, 0.8);
+  border-color: rgba(191, 205, 224, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.goal-card:hover::before {
+  transform: scaleX(1);
+}
+
+.goal-number {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--color-pale-slate);
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.goal-card h3 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.goal-card p {
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.dark-mode .goal-card h3 {
+  color: var(--color-pale-slate);
+}
+
+.dark-mode .goal-card p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.dark-mode .goal-number {
+  color: var(--color-pale-slate);
+  opacity: 0.2;
+}

@@ -1,3 +1,4 @@
+import '../projectCard.css'
 import InsightCard from '../insightCard'
 import { insights } from '../../data/insightsData'
 

@@ -1,3 +1,5 @@
+import './WhatsNextSection.css'
+
 export default function WhatsNextSection() {
   return (
     <section id="whatsnext" className="whatsnext">

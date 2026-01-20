@@ -1,3 +1,4 @@
+import './SkillsSection.css'
 import { HiDownload } from 'react-icons/hi'
 import { downloadFile } from '../../utils/downloadFile'
 
