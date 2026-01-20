@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './ProjectDetail.css'
 import { useNavigation } from '../../NavigationContext'
-import NavBar from '../NavBar'
+import NavBar from '../../components/NavBar'
 import ImageGallery from "react-image-gallery"
 import "react-image-gallery/styles/css/image-gallery.css"
 
