@@ -1,11 +1,12 @@
 import { createContext, useContext } from 'react'
 import type { ReactNode } from 'react'
 
-type SectionId = 'hero' | 'about' | 'whatsnext' | 'skills' | 'projects' | 'contact'
+type SectionId = 'hero' | 'about' | 'whatsnext' | 'skills' | 'projects' | 'insights' | 'contact'
 
 interface NavigationContextType {
   navigateToHome: () => void
   navigateToProjects: () => void
+  navigateToInsights: () => void
   navigateToSection: (section: SectionId) => void
 }
 

@@ -3,8 +3,9 @@ import './App.css'
 import { NavigationProvider } from './NavigationContext'
 import HomePage from './pages/HomePage'
 import ProjectDetailPage from './pages/ProjectDetailPage'
+import InsightDetailPage from './pages/InsightDetailPage'
 
-type SectionId = 'hero' | 'about' | 'whatsnext' | 'skills' | 'projects' | 'contact'
+type SectionId = 'hero' | 'about' | 'whatsnext' | 'skills' | 'projects' | 'insights' | 'contact'
 
 const SECTIONS: Record<SectionId, string> = {
   hero: 'hero',
@@ -12,6 +13,7 @@ const SECTIONS: Record<SectionId, string> = {
   whatsnext: 'whatsnext',
   skills: 'skills',
   projects: 'projects',
+  insights: 'insights',
   contact: 'contact',
 }
 
@@ -29,6 +31,12 @@ function AppContent() {
       navigate('/')
       setTimeout(() => {
         scrollToSection('projects')
+      }, 100)
+    },
+    navigateToInsights: () => {
+      navigate('/')
+      setTimeout(() => {
+        scrollToSection('insights')
       }, 100)
     },
     navigateToSection: (section: SectionId) => {
@@ -49,12 +57,17 @@ function AppContent() {
               <HomePage 
                 onViewWork={() => scrollToSection('projects')}
                 onProjectClick={(projectId) => navigate(`/project/${projectId}`)}
+                onInsightClick={(insightId) => navigate(`/insight/${insightId}`)}
               />
             } 
           />
           <Route 
             path="/project/:projectId" 
             element={<ProjectDetailPage />}
+          />
+          <Route 
+            path="/insight/:insightId" 
+            element={<InsightDetailPage />}
           />
         </Routes>
       </div>

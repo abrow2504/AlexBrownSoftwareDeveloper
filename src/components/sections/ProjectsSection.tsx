@@ -7,10 +7,10 @@ interface ProjectsSectionProps {
 
 export default function ProjectsSection({ onProjectClick }: ProjectsSectionProps) {
   return (
-    <section id="projects" className="projects">
+    <section id="projects" className="card-section">
       <div className="container">
         <h2>Featured Projects</h2>
-        <div className="projects-grid">
+        <div className="card-grid">
           {projects.map((project) => (
             <ProjectCard
               key={project.id}

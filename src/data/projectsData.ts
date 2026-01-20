@@ -55,13 +55,5 @@ export const projects: ProjectData[] = [
     description: 'A Python automation script that monitors a concert website and sends instant notifications when new US dates are announced.',
     repoLink: '#',
     writeup: 'Personal project that runs automatically every 10 minutes on GitHub Actions, scraping concert websites for new US tour dates and delivering instant notifications via iOS and email.'
-  },
-  {
-    id: 'ai-learning',
-    name: 'AI Learning Approach',
-    tech: 'ChatGPT, GitHub Copilot, Claude, Cursor, Perplexity, v0',
-    description: 'A comprehensive methodology for leveraging AI tools to accelerate software development learning and problem-solving.',
-    repoLink: '#',
-    writeup: 'Documented approach to using AI tools effectively for learning new technologies, debugging, code review, and accelerating development workflows while maintaining code quality and understanding.'
   }
 ]

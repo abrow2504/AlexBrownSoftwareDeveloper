@@ -730,20 +730,29 @@ section h2::after {
   color: var(--color-text-primary);
 }
 
-/* Projects Section */
-.projects {
+/* Card Section (Projects & Insights) */
+.card-section {
+  
   background: transparent;
 }
 
-.projects h2 {
+.card-section h2 {
   color: var(--color-vintage-grape);
 }
 
-.dark-mode .projects h2 {
+.dark-mode .card-section h2 {
   color: var(--color-white);
 }
 
-.projects-grid {
+.card-section p.section-intro {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+.card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
@@ -1015,7 +1024,7 @@ section h2::after {
     height: 180px;
   }
 
-  .projects-grid {
+  .card-grid {
     grid-template-columns: 1fr;
   }
 
