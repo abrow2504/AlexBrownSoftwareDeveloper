@@ -1,9 +1,9 @@
 import './ProjectDetail.css'
-import ProjectPage from './ProjectPage'
+import ProjectTemplate from './ProjectTemplate'
 
 function CalendarAutomationProject() {
   return (
-    <ProjectPage
+    <ProjectTemplate
       projectTitle="Division Calendar Automation"
       projectOverview="A multi-component Microsoft ecosystem solution combining a searchable Power App, two SharePoint lists, and advanced Power Automate workflows to create a transparent out-of-office visibility system for an entire division. This project demonstrates solving real organizational pain points with practical, user-friendly technology."
       techStack={["Power Apps", "Power Automate", "SharePoint", "Outlook", "SQL Database", "Microsoft Graph"]} 

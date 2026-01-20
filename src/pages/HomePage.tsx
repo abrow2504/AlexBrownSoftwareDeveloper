@@ -24,8 +24,8 @@ export default function HomePage({ onViewWork, onProjectClick, onInsightClick }:
         <AboutSection />
         <SkillsSection />
         <ProjectsSection onProjectClick={onProjectClick} />
-        <InsightsSection onInsightClick={onInsightClick} />
         <WhatsNextSection />
+        <InsightsSection onInsightClick={onInsightClick} />
         <ContactSection />
       </main>
       <footer className="footer">

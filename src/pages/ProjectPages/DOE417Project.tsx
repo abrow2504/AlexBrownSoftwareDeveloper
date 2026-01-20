@@ -1,8 +1,8 @@
-import ProjectPage from './ProjectPage'
+import ProjectTemplate from './ProjectTemplate'
 
 function DOE417Project() {
   return (
-    <ProjectPage
+    <ProjectTemplate
       projectTitle="DOE-417 Form Reporting System"
       projectOverview="Frontend development contributions to the Electric Emergency Incident and Disturbance Report (Form DOE-417) system. This critical application collects information on electric incidents and emergencies for the Department of Energy's national security and energy emergency management responsibilities. My work focused on admin interfaces, testing infrastructure, API updates, and UI improvements."
       techStack={["React", "TypeScript", "Cypress", "CosmosDB", "HTML", "CSS", "REST APIs"]}

@@ -1,4 +1,4 @@
-import ProjectPage from './ProjectPage'
+import ProjectTemplate from './ProjectTemplate'
 
 // Import images directly from public folder
 import image003 from '/image003.png'
@@ -67,7 +67,7 @@ const galleryImages = [
 
 function TravelSystemProject() {
   return (
-    <ProjectPage
+    <ProjectTemplate
       projectTitle="Power Platform Travel System"
       projectOverview="The project that kickstarted my career pivot into automation and Power Platform development. What began as a simple Microsoft Form with basic email notifications evolved over the years into a sophisticated end-to-end travel management system for Research Computing staff at PNNL. Through continuous iteration and adding functionality, the system now uses SharePoint lists and Power Automate workflows to streamline travel tracking, team coordination, and expense reporting. While admins still book travel through external services, my system eliminates hours of back-and-forth communication by enabling easier tracking, workload sharing, and transparency across the entire travel lifecycle. As we hired more admins who adopted the system, I refined it into a polished solution that gained popularity lab-wide, with half a dozen other PNNL organizations now using tailored versions."
       techStack={["Power Automate", "SharePoint Lists", "Microsoft Teams", "Outlook", "HTML Email Templates"]}

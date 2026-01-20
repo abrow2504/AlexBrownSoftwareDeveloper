@@ -1,8 +1,8 @@
-import ProjectPage from './ProjectPage'
+import ProjectTemplate from './ProjectTemplate'
 
 function ProposalSystemProject() {
   return (
-    <ProjectPage
+    <ProjectTemplate
       projectTitle="Research Computing Portfolio Proposal System"
       projectOverview="A SharePoint and Power Automate-based workflow system that manages the complete lifecycle of Research Computing portfolio proposals from initial submission through final approval and Work Package Number (WPN) generation. The system automates multi-tier approvals, notifications, and status tracking for research computing project proposals."
       techStack={["SharePoint", "Power Apps", "Power Automate"]}

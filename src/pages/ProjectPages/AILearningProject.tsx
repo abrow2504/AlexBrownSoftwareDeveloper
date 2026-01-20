@@ -1,8 +1,8 @@
-import ProjectPage from './ProjectPage'
+import ProjectTemplate from './ProjectTemplate'
 
 function AILearningProject() {
   return (
-    <ProjectPage
+    <ProjectTemplate
       projectTitle="AI-Assisted Learning Approach"
       projectOverview="A comprehensive methodology and toolkit for leveraging AI tools to accelerate software development learning, problem-solving, and productivity while maintaining code quality and deep understanding. This 'project' represents my systematic approach to integrating AI assistants into the development workflow."
       techStack={["ChatGPT", "GitHub Copilot", "Claude", "Cursor", "Perplexity", "v0"]}

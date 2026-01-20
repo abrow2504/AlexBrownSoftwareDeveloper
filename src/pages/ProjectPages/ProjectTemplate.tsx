@@ -13,7 +13,7 @@ interface GalleryImage {
     originalHeight?: number
 }
 
-interface ProjectPageProps {
+interface ProjectTemplateProps {
     projectTitle: string
     projectOverview: string
     techStack: string[]
@@ -38,7 +38,7 @@ interface ProjectPageProps {
     images?: GalleryImage[]
 }
 
-export default function ProjectPage({ projectTitle, projectOverview, techStack, context, solution, challenges, impact, includeGallery = false, images = [] }: ProjectPageProps) {
+export default function ProjectTemplate({ projectTitle, projectOverview, techStack, context, solution, challenges, impact, includeGallery = false, images = [] }: ProjectTemplateProps) {
   const { navigateToProjects } = useNavigation()
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   

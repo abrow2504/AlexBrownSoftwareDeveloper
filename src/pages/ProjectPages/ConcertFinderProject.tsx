@@ -1,8 +1,8 @@
-import ProjectPage from './ProjectPage'
+import ProjectTemplate from './ProjectTemplate'
 
 function ConcertFinderProject() {
   return (
-    <ProjectPage
+    <ProjectTemplate
       projectTitle="US Tour Date Checker"
       projectOverview="A configurable Python scraper that runs on GitHub Actions every 10 minutes to watch any tour site for new U.S. dates, then alerts me by email (plus optional SMS via carrier gateways and Telegram). It keeps state so only genuinely new shows trigger messages."
       techStack={["Python", "Selenium", "Beautiful Soup", "GitHub Actions", "SMTP (Gmail)", "Telegram Bot API"]}

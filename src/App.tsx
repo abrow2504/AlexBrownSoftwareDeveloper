@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-route
 import './App.css'
 import { NavigationProvider } from './NavigationContext'
 import HomePage from './pages/HomePage'
-import ProjectDetailPage from './pages/ProjectDetailPage'
+import ProjectRouter from './pages/ProjectRouter'
 import InsightDetailPage from './pages/InsightDetailPage'
 
 type SectionId = 'hero' | 'about' | 'whatsnext' | 'skills' | 'projects' | 'insights' | 'contact'
@@ -63,7 +63,7 @@ function AppContent() {
           />
           <Route 
             path="/project/:projectId" 
-            element={<ProjectDetailPage />}
+            element={<ProjectRouter />}
           />
           <Route 
             path="/insight/:insightId" 

@@ -1,8 +1,8 @@
-import ProjectPage from './ProjectPage'
+import ProjectTemplate from './ProjectTemplate'
 
 function MoodGardenProject() {
   return (
-    <ProjectPage
+    <ProjectTemplate
       projectTitle="Mood Garden"
       projectOverview="A post-graduation passion project that transforms daily mood logging into a spooky haunted garden. Mood Garden pairs a React + TypeScript front end with AI narration and hand-drawn art so emotional check-ins feel like tending an enchanted landscape."
       techStack={["React 19", "TypeScript", "Firebase Auth", "Firestore", "Vite", "Express Proxy", "OpenAI API", "CSS Animations"]}

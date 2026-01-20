@@ -17,7 +17,7 @@ const PROJECT_COMPONENTS: Record<string, () => React.ReactElement> = {
   'ai-learning': AILearningProject,
 }
 
-export default function ProjectDetailPage() {
+export default function ProjectRouter() {
   const { projectId } = useParams<{ projectId: string }>()
   const ProjectComponent = projectId ? PROJECT_COMPONENTS[projectId] : null
   

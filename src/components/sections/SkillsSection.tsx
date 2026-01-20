@@ -5,7 +5,7 @@ export default function SkillsSection() {
   return (
     <section id="skills" className="skills">
       <div className="container">
-        <h2>Technical Skills</h2>
+        <h2>Skills & Certifications</h2>
         <div className="skills-grid">
         <div className="skill-category">
           <h3>Languages & Frameworks</h3>
