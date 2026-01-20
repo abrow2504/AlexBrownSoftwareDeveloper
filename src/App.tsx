@@ -125,7 +125,7 @@ function App() {
 
         <section id="skills" className="skills">
           <div className="container">
-            <h2>Technical Skills</h2>
+            <h2>Skills & Certifications</h2>
             <div className="skills-grid">
               <div className="skill-category">
                 <h3>Languages & Frameworks</h3>
@@ -162,6 +162,17 @@ function App() {
                   <li>Requirements Gathering</li>
                   <li>Technical Documentation</li>
                   <li>Agile & Scrum</li>
+                  <li>Presentations & Education</li>
+                </ul>
+              </div>
+              <div className="skill-category">
+                <h3>Certifications</h3>
+                <ul>
+                  <li>Git Essential Training (LinkedIn Learning)</li>
+                  <li>CompTIA Project+</li>
+                  <li>ITIL Foundation (Axelos)</li>
+                  <li>Front End Web Development (WGU)</li>
+                  <li>Back End Web Development (WGU)</li>
                 </ul>
               </div>
             </div>
