@@ -46,14 +46,7 @@ function AICodingInsightPage() {
         ]
       }}
       impact={{
-        results: "This approach has accelerated my learning by 3-5x while ensuring deep understanding. I've successfully learned React, TypeScript, various APIs, and complex automation workflows much faster than traditional methods. The methodology has become a core part of my development process, and I've shared these techniques with colleagues to help them adopt AI tools effectively.",
-        measurableOutcomes: [
-          "Reduced time-to-competency for new technologies by ~70%",
-          "Improved code quality through AI-assisted review and testing",
-          "Enhanced problem-solving through multiple AI-generated approaches",
-          "Better documentation through AI-assisted technical writing",
-          "Faster debugging cycles with structured AI collaboration"
-        ]
+        results: "This approach has significantly accelerated my learning while ensuring deep understanding. I've successfully learned React, TypeScript, various APIs, and complex automation workflows much faster than traditional methods. The methodology has become a core part of my development process, and I've shared these techniques with colleagues to help them adopt AI tools effectively. Key benefits include faster learning of new technologies, improved code quality through AI-assisted review and testing, enhanced problem-solving by exploring multiple AI-generated approaches, better documentation, and more efficient debugging cycles."
       }}
     />
   )

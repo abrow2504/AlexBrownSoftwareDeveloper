@@ -31,6 +31,12 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     root.style.setProperty('--color-text-secondary', currentTheme.colors.text.secondary);
     root.style.setProperty('--color-text-light', currentTheme.colors.text.light);
     root.style.setProperty('--color-text-inverse', currentTheme.colors.text.inverse);
+    
+    // Gradient custom properties
+    root.style.setProperty('--gradient-primary', currentTheme.colors.gradients.primary);
+    root.style.setProperty('--gradient-secondary', currentTheme.colors.gradients.secondary);
+    root.style.setProperty('--gradient-subtle', currentTheme.colors.gradients.subtle);
+    root.style.setProperty('--gradient-accent', currentTheme.colors.gradients.accent);
 
     // Toggle dark mode class for additional styling
     root.classList.toggle('dark-mode', isDarkMode);

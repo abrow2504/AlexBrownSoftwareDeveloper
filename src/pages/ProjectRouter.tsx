@@ -5,7 +5,7 @@ import TravelSystemProject from './ProjectPages/TravelSystemProject'
 import CalendarAutomationProject from './ProjectPages/CalendarAutomationProject'
 import ProposalSystemProject from './ProjectPages/ProposalSystemProject'
 import ConcertFinderProject from './ProjectPages/ConcertFinderProject'
-import AILearningProject from './ProjectPages/AILearningProject'
+
 
 const PROJECT_COMPONENTS: Record<string, () => React.ReactElement> = {
   'travel-system': TravelSystemProject,
@@ -14,7 +14,6 @@ const PROJECT_COMPONENTS: Record<string, () => React.ReactElement> = {
   'calendar-automation': CalendarAutomationProject,
   'proposal-system': ProposalSystemProject,
   'concert-finder': ConcertFinderProject,
-  'ai-learning': AILearningProject,
 }
 
 export default function ProjectRouter() {

@@ -34,6 +34,12 @@ interface ThemeColors {
     grape: string;
     dark: string;
   };
+  gradients: {
+    primary: string;
+    secondary: string;
+    subtle: string;
+    accent: string;
+  };
 }
 
 export interface Theme {
@@ -86,6 +92,14 @@ export const lightTheme: Theme = {
       grape: colors.vintageGrape,
       dark: colors.black,
     },
+    
+    // Gradients
+    gradients: {
+      primary: 'linear-gradient(120deg, #3b3355 0%, #5d5d81 100%)',
+      secondary: 'linear-gradient(90deg, #3b3355, #5d5d81)',
+      subtle: 'linear-gradient(135deg, rgba(59, 51, 85, 0.1), rgba(93, 93, 129, 0.1))',
+      accent: 'linear-gradient(135deg, rgba(59, 51, 85, 0.15), rgba(93, 93, 129, 0.15))',
+    },
   },
   spacing: {
     xs: '0.25rem',
@@ -134,6 +148,14 @@ export const darkTheme: Theme = {
       dusty: colors.dustyGrape,
       grape: colors.vintageGrape,
       dark: colors.black,
+    },
+    
+    // Gradients
+    gradients: {
+      primary: 'linear-gradient(120deg, #ffffff 0%, #bfcde0 100%)',
+      secondary: 'linear-gradient(90deg, #bfcde0, rgba(255, 255, 255, 0.6))',
+      subtle: 'linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%)',
+      accent: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     },
   },
   spacing: {
