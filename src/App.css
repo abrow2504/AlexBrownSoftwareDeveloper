@@ -311,11 +311,16 @@
   left: 0;
   right: 0;
   bottom: 0;
-  /* background: radial-gradient(circle at 20% 50%, rgba(191, 205, 224, 0.08) 0%, transparent 50%); */
   pointer-events: none;
 }
 
-.hero.hero-mobile {
+
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}.hero-mobile {
   padding-top: 10rem;
 }
 
