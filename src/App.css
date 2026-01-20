@@ -485,20 +485,20 @@ section h2::after {
 }
 
 /* What's Next Section */
-.whats-next {
+.whatsnext {
   background: transparent;
   text-align: center;
 }
 
-.whats-next h2 {
+.whatsnext h2 {
   color: var(--color-vintage-grape);
 }
 
-.dark-mode .whats-next h2 {
+.dark-mode .whatsnext h2 {
   color: var(--color-white);
 }
 
-.whats-next .section-intro {
+.whatsnext .section-intro {
   max-width: 800px;
   margin: 0 auto 2.5rem;
   font-size: 1.2rem;
@@ -506,7 +506,7 @@ section h2::after {
   color: var(--color-text-secondary);
 }
 
-.dark-mode .whats-next .section-intro {
+.dark-mode .whatsnext .section-intro {
   color: rgba(255, 255, 255, 0.85);
 }
 
