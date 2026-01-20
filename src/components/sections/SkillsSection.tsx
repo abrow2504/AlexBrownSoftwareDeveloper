@@ -62,7 +62,17 @@ export default function SkillsSection() {
                 CompTIA Project+ <HiDownload className="download-icon" />
               </span>
               </li>
-              <li>ITIL® Foundation Certification</li>
+              <li>
+                <span 
+                  onClick={() => downloadFile('ITIL.pdf', 'ITIL_Foundation_Certification_Alex_Brown.pdf')}
+                  className="cert-download-link"
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => e.key === 'Enter' && downloadFile('ITIL.pdf', 'ITIL_Foundation_Certification_Alex_Brown.pdf')}
+                >
+                  ITIL® Foundation Certification <HiDownload className="download-icon" />
+                </span>
+              </li>
             <li>Requirements Gathering</li>
           </ul>
         </div>
