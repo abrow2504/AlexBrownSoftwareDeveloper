@@ -1043,3 +1043,36 @@ section h2::after {
     padding: 2rem 1.5rem;
   }
 }
+
+.cert-download-link {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+  font-size: 1rem !important;
+}
+
+.cert-download-link:hover {
+  color: var(--primary-hover, #814dd4);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.cert-download-link .download-icon {
+  font-size: 1rem !important;
+  width: 1rem !important;
+  height: 1rem !important;
+  min-width: 1rem !important;
+  max-width: 1rem !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  transition: transform 0.2s;
+}
+
+.cert-download-link .download-icon svg {
+  width: 1rem !important;
+  height: 1rem !important;
+  display: inline-block !important;
+}
+

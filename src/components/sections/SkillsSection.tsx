@@ -1,3 +1,6 @@
+import { HiDownload } from 'react-icons/hi'
+import { downloadFile } from '../../utils/downloadFile'
+
 export default function SkillsSection() {
   return (
     <section id="skills" className="skills">
@@ -37,9 +40,29 @@ export default function SkillsSection() {
         <div className="skill-category">
           <h3>Certifications & Professional Skills</h3>
           <ul>
-            <li>CompTIA Project+</li>
-            <li>AWS Certified Cloud Practitioner</li>
-            <li>ITIL® Foundation Certification</li>
+            <li>
+              <span 
+                onClick={() => downloadFile('AWS Certified Cloud Practitioner certificate.pdf', 'AWS_Certified_Cloud_Practitioner_Alex_Brown.pdf')} 
+                className="cert-download-link"
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => e.key === 'Enter' && downloadFile('AWS Certified Cloud Practitioner certificate.pdf', 'AWS_Certified_Cloud_Practitioner_Alex_Brown.pdf')}
+              >
+                AWS Certified Cloud Practitioner <HiDownload className="download-icon" />
+              </span>
+            </li>
+            <li>
+              <span 
+                onClick={() => downloadFile('CompTIA Project+ certificate.pdf', 'CompTIA_Project_Plus_Alex_Brown.pdf')} 
+                className="cert-download-link"
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => e.key === 'Enter' && downloadFile('CompTIA Project+ certificate.pdf', 'CompTIA_Project_Plus_Alex_Brown.pdf')}
+              >
+                CompTIA Project+ <HiDownload className="download-icon" />
+              </span>
+              </li>
+              <li>ITIL® Foundation Certification</li>
             <li>Requirements Gathering</li>
           </ul>
         </div>

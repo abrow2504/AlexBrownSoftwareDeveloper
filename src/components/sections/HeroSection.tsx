@@ -1,17 +1,9 @@
 import mePhoto from '../../assets/me.png'
 import { useScreenSize } from '../../hooks/useScreenSize'
+import { downloadFile } from '../../utils/downloadFile'
 
 interface HeroSectionProps {
   onViewWork: () => void
-}
-
-function downloadResume() {
-  const link = document.createElement('a')
-  link.href = '/AlexBrownSoftwareDeveloper/Alex_Brown_Resume_2026.pdf'
-  link.download = 'Alex_Brown_Resume_2026.pdf'
-  document.body.appendChild(link)
-  link.click()
-  document.body.removeChild(link)
 }
 
 export default function HeroSection({ onViewWork }: HeroSectionProps) {
@@ -28,7 +20,7 @@ export default function HeroSection({ onViewWork }: HeroSectionProps) {
             <p>Passionate about workplace automation, frontend development, and creating scalable technical solutions that improve operational efficiency.</p>
             <div className="hero-buttons">
               <button onClick={onViewWork} className="btn btn-primary">View My Work</button>
-              <button onClick={downloadResume} className="btn btn-primary">Download My Resume</button>
+              <button onClick={() => downloadFile('2026 Resume.pdf', 'Alex_Brown_Resume_2026.pdf')} className="btn btn-primary">Download My Resume</button>
             </div>
           </div>
           <div className="hero-photo">
