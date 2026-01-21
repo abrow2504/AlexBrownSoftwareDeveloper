@@ -21,7 +21,7 @@ export const projects: ProjectData[] = [
     name: 'Mood Garden',
     tech: 'React 19, TypeScript, Firebase Auth, Firestore, Vite, Express Proxy, OpenAI API, CSS Animations',
     description: 'A personal React/TypeScript web app that combines mood tracking with AI-generated insights and cute spooky illustrations.',
-    repoLink: '#',
+    repoLink: 'https://github.com/abrow2504/SpookyMoodGarden/',
     image: `${import.meta.env.BASE_URL}moodGarden/moodGarden.png`,
     // writeup: 'Built right after graduation as a creative outlet combining my love for art and technology. Features Firebase authentication, AI-powered mood insights, and hand-drawn spooky illustrations with smooth animations.'
   },

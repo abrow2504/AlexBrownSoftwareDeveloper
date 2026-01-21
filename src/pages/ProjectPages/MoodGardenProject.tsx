@@ -42,7 +42,7 @@ function MoodGardenProject() {
     <ProjectTemplate
       projectTitle="Mood Garden"
       projectOverview="A post-graduation passion project that transforms daily mood logging into a spooky haunted garden. Mood Garden pairs a React + TypeScript front end with AI narration and hand-drawn art so emotional check-ins feel like tending an enchanted landscape."
-      projectLink="#"
+      projectLink="https://abrow2504.github.io/SpookyMoodGarden/"
       projectLinkText="Visit Mood Garden"
       
       techStack={["React 19", "TypeScript", "Firebase Auth", "Firestore", "Vite", "Express Proxy", "OpenAI API", "CSS Animations"]}
