@@ -62,8 +62,8 @@ function MoodGardenProject() {
         ]
       }}
       challenges={{
-        difficulties: "Shielding the OpenAI key, handling narration failures gracefully, and animating heavy illustration assets without jank were the biggest hurdles-- in fact I'm still wrestling to get the garden to handle screen size changes gracefully!",
-        resolutions: "I introduced an Express proxy with rate limiting and custom error surfacing, cached narration fallbacks in the hook, and rewrote animations to rely on transforms while preloading assets and throttling motion updates.",
+        difficulties: "The biggest challenge was securing the OpenAI API key while deploying to GitHub Pages, which only serves static files. Since GitHub Pages can't run server-side code, I couldn't store environment variables or process API calls server-side, meaning any API key in my frontend bundle would be exposed in the browser.",
+        resolutions: "I learned about proxy services that act as intermediaries between the frontend and external APIs. I set up an Express server deployed separately that receives requests from my React app, forwards them to OpenAI's API with the securely stored key, and returns the response. This keeps the API key completely hidden from the client while still enabling the AI narration feature.",
         lessonsLearned: [
           "Typed Firebase auth and Firestore patterns within React context",
           "Practical API hardening with proxy routing and rate controls",
