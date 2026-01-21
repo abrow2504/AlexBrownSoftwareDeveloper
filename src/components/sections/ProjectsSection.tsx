@@ -21,6 +21,7 @@ export default function ProjectsSection({ onProjectClick }: ProjectsSectionProps
               onViewDetails={() => onProjectClick(project.id)}
               repoLink={project.repoLink}
               projectWriteup={project.writeup}
+              projectImage={project.image}
             />
           ))}
         </div>

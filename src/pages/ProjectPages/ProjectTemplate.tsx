@@ -16,6 +16,8 @@ interface GalleryImage {
 interface ProjectTemplateProps {
     projectTitle: string
     projectOverview: string
+    projectLink?: string
+    projectLinkText?: string
     techStack: string[]
     context: {
         forWho: string
@@ -38,7 +40,7 @@ interface ProjectTemplateProps {
     images?: GalleryImage[]
 }
 
-export default function ProjectTemplate({ projectTitle, projectOverview, techStack, context, solution, challenges, impact, includeGallery = false, images = [] }: ProjectTemplateProps) {
+export default function ProjectTemplate({ projectTitle, projectOverview, projectLink, projectLinkText, techStack, context, solution, challenges, impact, includeGallery = false, images = [] }: ProjectTemplateProps) {
   const { navigateToProjects } = useNavigation()
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   
@@ -66,6 +68,11 @@ export default function ProjectTemplate({ projectTitle, projectOverview, techSta
                 <p>
                   {projectOverview}
                 </p>
+                {projectLink && (
+                  <a href={projectLink} className="project-link-btn" target="_blank" rel="noopener noreferrer">
+                    {projectLinkText || 'Visit Project'} →
+                  </a>
+                )}
               </div>
 
               <div className="project-context">
@@ -127,7 +134,7 @@ export default function ProjectTemplate({ projectTitle, projectOverview, techSta
                   originalWidth: image.originalWidth,
                   originalHeight: image.originalHeight
                 }))} 
-                showFullscreenButton={false}
+                showFullscreenButton={true}
                 onSlide={handleSlide}
               />
             </div>

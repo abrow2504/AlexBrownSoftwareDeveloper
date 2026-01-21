@@ -39,7 +39,7 @@ export default function SkillsSection() {
           </ul>
         </div>
         <div className="skill-category">
-          <h3>Certifications & Professional Skills</h3>
+          <h3>Certifications & Education</h3>
           <ul>
             <li>
               <span 
@@ -74,7 +74,8 @@ export default function SkillsSection() {
                   ITIL® Foundation Certification <HiDownload className="download-icon" />
                 </span>
               </li>
-            <li>Requirements Gathering</li>
+              <li>Bachelor of Science in Software Engineering, WGU</li>
+
           </ul>
         </div>
         </div>

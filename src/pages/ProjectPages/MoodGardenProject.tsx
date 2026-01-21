@@ -1,10 +1,50 @@
 import ProjectTemplate from './ProjectTemplate'
 
+// Import images directly from public folder
+import gardenLoading from '/moodGarden/gardenLoading.png'
+import login from '/moodGarden/login.png'
+import oracle from '/moodGarden/oracle.png'
+import moodGarden from '/moodGarden/moodGarden.png'
+
+const galleryImages = [
+    {
+    original: moodGarden,
+    thumbnail: moodGarden,
+    description: 'Mood Garden home page and mood logging interface',
+    originalWidth: 1655,
+    originalHeight: 418
+  },
+  {
+    original: login,
+    thumbnail: login,
+    description: 'Login modal with email/password authentication',
+    originalWidth: 1655,
+    originalHeight: 418
+  },
+  {
+    original: gardenLoading,
+    thumbnail: gardenLoading,
+    description: 'Empty states for garden oracle and mood garden.',
+    originalWidth: 1655,
+    originalHeight: 418
+  },
+  {
+    original: oracle,
+    thumbnail: oracle,
+    description: 'Oracle narration delivering AI-powered insights based on mood entries',
+    originalWidth: 1655,
+    originalHeight: 418
+  }
+]
+
 function MoodGardenProject() {
   return (
     <ProjectTemplate
       projectTitle="Mood Garden"
       projectOverview="A post-graduation passion project that transforms daily mood logging into a spooky haunted garden. Mood Garden pairs a React + TypeScript front end with AI narration and hand-drawn art so emotional check-ins feel like tending an enchanted landscape."
+      projectLink="#"
+      projectLinkText="Visit Mood Garden"
+      
       techStack={["React 19", "TypeScript", "Firebase Auth", "Firestore", "Vite", "Express Proxy", "OpenAI API", "CSS Animations"]}
       context={{
         forWho: "Built for fun to marry my new skills as newly graduated software engineer with my love of illustration and all things spooky.",
@@ -42,6 +82,8 @@ function MoodGardenProject() {
           "Portfolio-ready demo that highlights my ability to blend creativity with robust engineering"
         ]
       }}
+      includeGallery={true}
+      images={galleryImages}
     />
   )
 }

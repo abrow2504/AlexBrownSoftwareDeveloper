@@ -53,6 +53,29 @@
   color: var(--color-dusty-grape);
 }
 
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: var(--color-dusty-grape);
+  margin-left: 2px;
+  animation: blink 1s infinite;
+  vertical-align: middle;
+}
+
+.dark-mode .typing-cursor {
+  background-color: var(--color-pale-slate);
+}
+
+@keyframes blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
 .dark-mode .hero-greeting {
   color: var(--color-pale-slate);
 }

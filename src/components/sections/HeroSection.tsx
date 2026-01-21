@@ -2,6 +2,7 @@ import './HeroSection.css'
 import mePhoto from '../../assets/me.png'
 import { useScreenSize } from '../../hooks/useScreenSize'
 import { downloadFile } from '../../utils/downloadFile'
+import { useState, useEffect } from 'react'
 
 interface HeroSectionProps {
   onViewWork: () => void
@@ -9,13 +10,32 @@ interface HeroSectionProps {
 
 export default function HeroSection({ onViewWork }: HeroSectionProps) {
   const { isMobile } = useScreenSize()
+  const [displayedText, setDisplayedText] = useState('')
+  const fullText = 'Hello world!'
+
+  useEffect(() => {
+    let currentIndex = 0
+    const typingInterval = setInterval(() => {
+      if (currentIndex <= fullText.length) {
+        setDisplayedText(fullText.slice(0, currentIndex))
+        currentIndex++
+      } else {
+        clearInterval(typingInterval)
+      }
+    }, 100) // 100ms between each character
+
+    return () => clearInterval(typingInterval)
+  }, [])
 
   return (
     <section id="hero" className={`hero ${isMobile ? 'hero-mobile' : ''}`}>
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
-            <p className="hero-greeting">Hello world!</p>
+            <p className="hero-greeting">
+              {displayedText}
+              <span className="typing-cursor"></span>
+            </p>
             <h1>I'm Alex Brown</h1>
             <h2>Software Engineer (Frontend / Automation)</h2>
             <p>Passionate about workplace automation, frontend development, and creating scalable technical solutions that improve operational efficiency.</p>

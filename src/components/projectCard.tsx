@@ -5,11 +5,12 @@ interface ProjectCardProps {
   projectTech: string
   projectDescription: string
   onViewDetails: () => void
-  repoLink: string
-  projectWriteup: string
+  repoLink?: string
+  projectWriteup?: string
+  projectImage?: string
 }
 
-export default function ProjectCard({ projectName, projectTech, projectDescription, onViewDetails, repoLink, projectWriteup }: ProjectCardProps) {
+export default function ProjectCard({ projectName, projectTech, projectDescription, onViewDetails, repoLink, projectWriteup, projectImage }: ProjectCardProps) {
   return (
     <div className="project-card">
       <h3>{projectName}</h3>
@@ -19,12 +20,20 @@ export default function ProjectCard({ projectName, projectTech, projectDescripti
       </div>
       <div className="project-links">
         <button className="btn" onClick={onViewDetails}>View Details</button>
-        <a href={repoLink} className="btn" target="_blank">GitHub Repo</a>
+        {repoLink && (
+          <a href={repoLink} className="btn" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+        )}
       </div>
-      <div className="project-writeup">
-        <h4>Project Process</h4>
-        <p>{projectWriteup}</p>
-      </div>
+      {projectImage ? (
+        <div className="project-image">
+          <img src={projectImage} alt={`${projectName} preview`} />
+        </div>
+      ) : projectWriteup ? (
+        <div className="project-writeup">
+          <h4>Project Process</h4>
+          <p>{projectWriteup}</p>
+        </div>
+      ) : null}
     </div>
   )
 }

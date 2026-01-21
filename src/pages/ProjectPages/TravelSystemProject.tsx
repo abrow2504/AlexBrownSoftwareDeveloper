@@ -1,13 +1,13 @@
 import ProjectTemplate from './ProjectTemplate'
 
 // Import images directly from public folder
-import image003 from '/image003.png'
-import image004 from '/image004.png'
-import image005 from '/image005.png'
-import image006 from '/image006.png'
-import image007 from '/image007.png'
-import image008 from '/image008.png'
-import image011 from '/image011.png'
+import image003 from '/travelSystem/image003.png'
+import image004 from '/travelSystem/image004.png'
+import image005 from '/travelSystem/image005.png'
+import image006 from '/travelSystem/image006.png'
+import image007 from '/travelSystem/image007.png'
+import image008 from '/travelSystem/image008.png'
+import image011 from '/travelSystem/image011.png'
 
 const galleryImages = [
         {

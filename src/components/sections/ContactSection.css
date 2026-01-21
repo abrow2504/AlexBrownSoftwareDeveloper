@@ -86,7 +86,7 @@
 
 /* Footer */
 .footer {
-  background: var(--gradient-primary);
+  background: var(--color-vintage-grape);
   color: var(--color-white);
   text-align: center;
   padding: 3rem 2rem;
