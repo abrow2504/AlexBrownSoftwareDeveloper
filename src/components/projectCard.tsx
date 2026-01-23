@@ -24,16 +24,25 @@ export default function ProjectCard({ projectName, projectTech, projectDescripti
           <a href={repoLink} className="btn" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
         )}
       </div>
-      {projectImage ? (
-        <div className="project-image">
-          <img src={projectImage} alt={`${projectName} preview`} />
+      {projectImage && (
+        <div className="project-image-container">
+          <img src={projectImage} alt={`${projectName} preview`} className="project-image" />
+          {projectWriteup && (
+            <div className="project-overlay">
+              <div className="project-overlay-content">
+                <h4>Project Process</h4>
+                <p>{projectWriteup}</p>
+              </div>
+            </div>
+          )}
         </div>
-      ) : projectWriteup ? (
+      )}
+      {!projectImage && projectWriteup && (
         <div className="project-writeup">
           <h4>Project Process</h4>
           <p>{projectWriteup}</p>
         </div>
-      ) : null}
+      )}
     </div>
   )
 }

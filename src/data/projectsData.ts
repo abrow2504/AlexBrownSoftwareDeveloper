@@ -23,7 +23,7 @@ export const projects: ProjectData[] = [
     description: 'A personal React/TypeScript web app that combines mood tracking with AI-generated insights and cute spooky illustrations.',
     repoLink: 'https://github.com/abrow2504/SpookyMoodGarden/',
     image: `${import.meta.env.BASE_URL}moodGarden/moodGarden.png`,
-    // writeup: 'Built right after graduation as a creative outlet combining my love for art and technology. Features Firebase authentication, AI-powered mood insights, and hand-drawn spooky illustrations with smooth animations.'
+    writeup: 'React/TypeScript app blending mood tracking with spooky hand-drawn art and AI-powered insights. Entries stored in Firestore animate mood-specific plants in real time, while an Express proxy secures OpenAI calls for gothic oracle narration.'
   },
   {
     id: 'doe417',
