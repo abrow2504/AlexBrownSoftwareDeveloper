@@ -1,11 +1,19 @@
 import ProjectTemplate from './ProjectTemplate'
 import DOE417home from '/doe417/DOE417home.png'
+import trainingmode from '/doe417/trainingmode.png'
 
 const galleryImages = [
     {
     original: DOE417home,
     thumbnail: DOE417home,
     description: 'DOE-417 Landing Page',
+    originalWidth: 1655,
+    originalHeight: 418
+  },
+      {
+    original: trainingmode,
+    thumbnail: trainingmode,
+    description: 'Implemented training-mode specific UI to indicate report is not submitted to DOE',
     originalWidth: 1655,
     originalHeight: 418
   }

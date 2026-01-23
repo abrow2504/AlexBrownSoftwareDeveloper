@@ -41,13 +41,13 @@ function MoodGardenProject() {
   return (
     <ProjectTemplate
       projectTitle="Mood Garden"
-      projectOverview="A post-graduation passion project that transforms daily mood logging into a spooky haunted garden. Mood Garden pairs a React + TypeScript front end with AI narration and hand-drawn art so emotional check-ins feel like tending an enchanted landscape."
+      projectOverview="A passion project I worked on during school that transforms daily mood logging into a spooky haunted garden. Mood Garden pairs a React + TypeScript front end with AI narration and hand-drawn art so emotional check-ins feel like tending an enchanted landscape."
       projectLink="https://abrow2504.github.io/SpookyMoodGarden/"
       projectLinkText="Visit Mood Garden"
       
       techStack={["React 19", "TypeScript", "Firebase Auth", "Firestore", "Vite", "Express Proxy", "OpenAI API", "CSS Animations"]}
       context={{
-        forWho: "Built for fun to marry my new skills as newly graduated software engineer with my love of illustration and all things spooky.",
+        forWho: "Built for fun to marry my growing skills as a software engineer during school with my love of illustration and all things spooky. I started Mood Garden because I wanted more practice with React and TypeScript, having just begun a React/TypeScript project at work.",
         problemToSolve: "To challenge myself to build a full-stack app that blends creativity with technical rigor, while exploring how AI can enhance personal reflection. This one's still a work in progress that I try to iterate on in my spare time!",
       }}
       solution={{
