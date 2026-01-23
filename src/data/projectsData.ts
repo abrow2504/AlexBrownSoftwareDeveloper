@@ -49,10 +49,11 @@ export const projects: ProjectData[] = [
   },
   {
     id: 'concert-finder',
-    name: 'US Concert Finder',
-    tech: 'Python, Selenium, Beautiful Soup, GitHub Actions, SMTP (Gmail), Telegram Bot API',
-    description: 'A Python automation script that monitors a concert website and sends instant notifications when new US dates are announced.',
-    repoLink: '#',
-    writeup: 'Personal project that runs automatically every 10 minutes on GitHub Actions, scraping concert websites for new US tour dates and delivering instant notifications via iOS and email.'
+    name: 'US Tour Date Checker',
+    tech: 'Python, Selenium, Beautiful Soup, pytest, GitHub Actions, SMTP (Gmail), Telegram Bot API',
+    description: 'A modular, well-tested Python scraper that monitors any tour website for new US dates and sends multi-channel notifications (email, SMS, Telegram).',
+    repoLink: 'https://github.com/abrow2504/US-tour-date-checker/',
+    image: `${import.meta.env.BASE_URL}tourdates/tourNotif.png`,
+    writeup: 'Production-ready automation with clean architecture (5 modules), comprehensive pytest test suite, and configurable JSON-driven scraping. Runs every 10 minutes on GitHub Actions, sending instant notifications via email, SMS (carrier gateway), and Telegram with smart deduplication.'
   }
 ]
