@@ -1,6 +1,7 @@
 import ProjectTemplate from './ProjectTemplate'
 import tourNotif from '/tourdates/tourNotif.png'
 import pytests from '/tourdates/pytests.png'
+import actions from '/tourdates/actions.png'
 
 const galleryImages = [
     {
@@ -14,6 +15,13 @@ const galleryImages = [
     original: pytests,
     thumbnail: pytests,
     description: 'Comprehensive pytest test suite for the US Tour Date Checker',
+    originalWidth: 1655,
+    originalHeight: 418
+  },
+  {
+    original: actions,
+    thumbnail: actions,
+    description: 'GitHub Actions workflow running the scraper every 10 minutes',
     originalWidth: 1655,
     originalHeight: 418
   }
