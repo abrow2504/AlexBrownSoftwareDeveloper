@@ -23,7 +23,8 @@ function CalendarAutomationProject() {
           "Admin feature to schedule OOO on behalf of another person",
           "Automatic Outlook calendar invite generation sent to user, subscribers, and delegates",
           "Update propagation: changes to SharePoint calendar items sync to Outlook invites",
-          "Cancellation via choice field to preserve data integrity for automations"
+          "Cancellation via choice field to preserve data integrity for automations",
+          "Comprehensive technical runbooks for both end users and Power Platform developers with detailed troubleshooting guides and system architecture documentation"
         ]
       }}
       challenges={{
@@ -34,7 +35,8 @@ function CalendarAutomationProject() {
           "Power App performance requires careful database design and filtering strategies",
           "Bidirectional synchronization between multiple systems requires well-thought-out flow logic",
           "User experience in Power Apps can make or break adoption—visual feedback (disabled buttons, tab switching) is essential",
-          "SharePoint choice fields are effective for status tracking without destroying data"
+          "SharePoint choice fields are effective for status tracking without destroying data",
+          "Comprehensive technical documentation is essential for system maintainability and enables other developers to troubleshoot and extend the solution"
         ]
       }}
       impact={{ 

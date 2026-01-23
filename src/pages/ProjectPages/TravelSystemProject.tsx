@@ -87,12 +87,13 @@ function TravelSystemProject() {
           "Multi-channel notifications (Email + Teams) for status changes",
           "Custom SharePoint views for active trips, personal assignments, and archives",
           "Conditional logic to exclude cancelled trips from automated processing",
-          "Professional HTML email templates with embedded trip details and links"
+          "Professional HTML email templates with embedded trip details and links",
+          "Comprehensive technical runbooks for both end users and Power Platform developers with step-by-step instructions and troubleshooting procedures"
         ]
       }}
       challenges={{
         difficulties: "Designing an internal tracking system that complements (rather than replaces) external booking services was challenging - the system needed to provide value without duplicating functionality. Handling edge cases like last-minute cancellations, trip modifications, and missing documentation required careful planning. Ensuring the daily scheduled triggers correctly identified travelers based on date logic while filtering out cancelled trips needed precise conditional expressions. Balancing automation with the reality that admins still use external systems for actual booking required thoughtful workflow design.",
-        resolutions: "I created detailed process maps for each workflow and tested extensively with real travel scenarios. Implemented robust date-based filtering logic in the scheduled workflows to accurately target tomorrow's departures and yesterday's returns. Built in cancellation-aware conditional checks throughout all automated processes. Developed comprehensive documentation including a full runbook for admins with troubleshooting procedures, edge case handling, and system maintenance guidelines. Used connection references to maintain consistent authentication and permissions across workflows.",
+        resolutions: "I created detailed process maps for each workflow and tested extensively with real travel scenarios. Implemented robust date-based filtering logic in the scheduled workflows to accurately target tomorrow's departures and yesterday's returns. Built in cancellation-aware conditional checks throughout all automated processes. Developed comprehensive technical runbooks for both end users (travelers and admins) and Power Platform developers, including step-by-step instructions, troubleshooting procedures, edge case handling, system maintenance guidelines, and workflow architecture documentation. Used connection references to maintain consistent authentication and permissions across workflows.",
         lessonsLearned: [
           "The power of iterative development - starting simple and adding complexity over time",
           "How to identify automation opportunities and progressively build on them",

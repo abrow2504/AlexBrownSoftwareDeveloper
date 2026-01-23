@@ -23,7 +23,8 @@ function ProposalSystemProject() {
           "Conditional workflow logic that restarts pre-approval if revisions requested early in process",
           "Save as Draft functionality for offering leads to work incrementally",
           "Complete audit trail of all approval decisions and status changes",
-          "Work Package Number (WPN) tracking and assignment workflow"
+          "Work Package Number (WPN) tracking and assignment workflow",
+          "Comprehensive technical runbooks for both end users (Offering Leads, approvers) and Power Platform developers with detailed troubleshooting procedures and workflow architecture"
         ]
       }}
       challenges={{
@@ -37,7 +38,7 @@ function ProposalSystemProject() {
           "Role-based security model implementation in SharePoint",
           "User-centered design principles for business process automation",
           "Importance of iterative development and stakeholder feedback in workflow design",
-          "Documentation best practices for complex enterprise systems (created comprehensive user runbook)"
+          "Documentation best practices for complex enterprise systems—comprehensive technical runbooks are essential for both end-user adoption and developer maintainability"
         ]
       }}
       impact={{
