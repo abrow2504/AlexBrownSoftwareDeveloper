@@ -30,7 +30,7 @@ export const projects: ProjectData[] = [
     name: 'DOE-417 Form Reporting System',
     tech: 'React, TypeScript, Cypress, CosmosDB, HTML, CSS, REST APIs',
     description: 'Frontend development for a DOE electric emergency incident reporting system, focusing on admin interfaces, testing, and CosmosDB integration.',
-
+    image: `${import.meta.env.BASE_URL}doe417/DOE417home.png`,
     writeup: 'Built admin interfaces for exercises and organizations management with CosmosDB CRUD operations. Started with Cypress testing to learn the codebase, then progressed to full feature development including API updates and data transformation.'
   },
   {
