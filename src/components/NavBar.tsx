@@ -9,8 +9,8 @@ const NAV_LINKS = [
   { label: 'About', section: 'about' as SectionId },
   { label: 'Skills', section: 'skills' as SectionId },
   { label: 'Projects', section: 'projects' as SectionId },
-  { label: 'Insights', section: 'insights' as SectionId },
   { label: "What's Next", section: 'whatsnext' as SectionId },
+  { label: 'Insights', section: 'insights' as SectionId },
   { label: 'Contact', section: 'contact' as SectionId },
 ]
 
