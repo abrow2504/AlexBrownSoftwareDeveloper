@@ -12,7 +12,6 @@ export default function SkillsSection() {
           <h3>Languages & Frameworks</h3>
           <ul>
             <li>TypeScript</li>
-            <li>JavaScript</li>
             <li>React</li>
             <li>HTML</li>
             <li>CSS</li>
@@ -33,8 +32,8 @@ export default function SkillsSection() {
           <ul>
             <li>Git</li>
             <li>Azure DevOps</li>
-            <li>Cypress (E2E testing)</li>
-            <li>Agile & Scrum</li>
+            <li>Cypress</li>
+            <li>Agile</li>
             <li>Technical Documentation</li>
           </ul>
         </div>
@@ -71,10 +70,10 @@ export default function SkillsSection() {
                   tabIndex={0}
                   onKeyDown={(e) => e.key === 'Enter' && downloadFile('ITIL.pdf', 'ITIL_Foundation_Certification_Alex_Brown.pdf')}
                 >
-                  ITIL® Foundation Certification <HiDownload className="download-icon" />
+                  ITIL® Foundation <HiDownload className="download-icon" />
                 </span>
               </li>
-              <li>Bachelor of Science in Software Engineering, WGU</li>
+              <li>B.S. in Software Engineering, WGU</li>
 
           </ul>
         </div>
