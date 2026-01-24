@@ -11,7 +11,7 @@ function AIDocumentationInsightsPage() {
           <section className="insight-section">
             <h2>Intro</h2>
             <p>
-              Do you have a solution with a ton of Power Automate flows… and you&apos;re the only one who
+              Do you have a solution with a ton of Power Automate flows… and you're the only one who
               knows what they do? Maybe you have a quick one-off project that has been sitting around
               without proper documentation? Is drafting a user manual your own personal torture?
             </p>
@@ -22,8 +22,10 @@ function AIDocumentationInsightsPage() {
             <p>
               This is a good tool for standing up a draft that would normally take hours – it will not be
               perfect by any means but it sure can save you a lot of time and effort when all you have to do
-              is play editor. Of course similar things could be done for non-Power-Automate solutions, but
-              this is what I&apos;ve been using to clean up our automation workflows.
+              is play editor. While I've been using this primarily to clean up our Power Automate workflows,
+              the same technique works for generating README files, quickstart guides, or technical documentation 
+              for any codebase. Just point your AI assistant at the source code and provide context about the 
+              project's purpose and audience.
             </p>
             <p>
             </p>
@@ -52,11 +54,12 @@ function AIDocumentationInsightsPage() {
                 user actions not captured in your flows. First draft vibes—just gather what you can.
               </li>
               <li>
-                <strong>STEP 4: Prompt.</strong> Pick your output format (HTML for Word paste, Markdown for repos)
-                and prompt GitHub Copilot Agent mode. Try the generic prompt below to get started.
+                <strong>STEP 4: Prompt.</strong> Pick your output format (HTML for Word paste, Markdown for repos),
+                choose your preferred chat model (Claude 3.5 Sonnet, GPT-4o, etc.), and prompt GitHub Copilot Agent 
+                mode. Try the generic prompt below to get started.
               </li>
               <li>
-                <strong>STEP 5: Refine.</strong> Skim from each user&apos;s perspective and ask Copilot to clarify or
+                <strong>STEP 5: Refine.</strong> Skim from each user's perspective and ask Copilot to clarify or
                 fix anything off.
               </li>
               <li>
@@ -64,7 +67,7 @@ function AIDocumentationInsightsPage() {
                 item vs. MS Form), and cut fluff.
               </li>
               <li>
-                <strong>STEP 7: Verify.</strong> Get another set of eyes to confirm it&apos;s accurate and complete.
+                <strong>STEP 7: Verify.</strong> Get another set of eyes to confirm it's accurate and complete.
               </li>
               <li>
                 <strong>STEP 8: Maintain.</strong> Update the doc as flows evolve. Treat it as the living source of
@@ -91,7 +94,7 @@ function AIDocumentationInsightsPage() {
               <li>Overview: what the solution does and the business process it supports; key goals/outcomes.</li>
               <li>Roles &amp; Responsibilities: requestor, approver, admin, IT support; required permissions/access.</li>
               <li>
-                Process Walkthrough: step-by-step from each role&apos;s perspective; which flow handles each step; link or
+                Process Walkthrough: step-by-step from each role's perspective; which flow handles each step; link or
                 describe a flowchart if available.
               </li>
               <li>
